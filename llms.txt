@@ -1,0 +1,37 @@
+# Zero — zero.ma
+
+> Linux & IT Infrastructure Specialist based in Marrakech, Morocco.
+> I learn by doing — one command at a time.
+
+## About
+- Name: Zero (0x9z)
+- Role: Linux & IT Infrastructure Specialist
+- Location: Marrakech, Morocco
+- Focus: Linux, Networking, Shell Scripting, CCNA, IT Infrastructure
+
+## Links
+- Portfolio: [zero.ma](https://zero.ma)
+- Blog: [blog.zero.ma](https://blog.zero.ma)
+- GitHub: [github.com/0x9z](https://github.com/0x9z)
+- LinkedIn: [linkedin.com/in/0x9z](https://linkedin.com/in/0x9z)
+- Medium: [medium.com/@0x9z](https://medium.com/@0x9z)
+
+## Skills
+- Linux Administration (Fedora, Bash, Systemd)
+- Networking (CCNA, Cisco, Subnetting, OSI Model)
+- Shell Scripting (Automation, Monitoring)
+- Programming (Python, JavaScript, HTML/CSS)
+- DevOps (Docker, YAML, CI/CD, GitHub Actions)
+- Cybersecurity (TCM Security, ISC2)
+
+## Projects
+- Cisco CCNA Labs (76+ hands-on labs)
+- IPv4 Subnet Calculator
+- Snake Detector
+- CV Builder
+- Automated Backup Script
+- System Monitor
+
+## Blog
+Posts are published on Medium and displayed at blog.zero.ma.
+RSS Feed: [medium.com/feed/@0x9z](https://medium.com/feed/@0x9z)
