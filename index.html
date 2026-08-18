@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=5">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <title>Zero - Linux & IT Infrastructure Specialist - Portfolio</title>
+    <meta name="description" content="Zero - Linux & IT Infrastructure Specialist. Networking, Shell Scripting, CCNA Candidate, and Homelab Enthusiast. Based in Marrakech, Morocco.">
+    <meta name="keywords" content="Linux, IT Infrastructure, Networking, Shell Scripting, CCNA, Cisco, TCM Security, Homelab, Morocco, Zero">
+    <meta name="author" content="Zero">
+    <meta name="theme-color" content="#000000">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://zero.ma/">
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Zero - Portfolio">
+    <meta property="og:title" content="Zero - Linux & IT Infrastructure Specialist">
+    <meta property="og:description" content="Linux & IT Infrastructure | Networking | Shell Scripting. Self-taught enthusiast building hands-on projects and preparing for CCNA certification.">
+    <meta property="og:url" content="https://zero.ma/">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Zero - Linux & IT Infrastructure Specialist">
+    <meta name="twitter:description" content="Linux & IT Infrastructure | Networking | Shell Scripting | CCNA Candidate">
+    
+       
+    <!-- Preload critical resources -->
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style">
+    
+    <!-- Critical CSS inline for above-the-fold content -->
+    <style>
+        *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+        html{scroll-behavior:smooth}
+        body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;background:#fff;color:#1e293b;overflow-x:hidden}
+        .loading-screen{position:fixed;inset:0;background:#fff;display:flex;align-items:center;justify-content:center;z-index:1040}
+        .loader-ring{width:60px;height:60px;border:3px solid #e2e8f0;border-top-color:#000000;border-radius:50%;animation:spin 1s linear infinite}
+        @keyframes spin{to{transform:rotate(360deg)}}
+    </style>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"></noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="apple-touch-icon" href="favicon.svg">
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Zero",
+        "jobTitle": "Linux & IT Infrastructure Specialist",
+        "description": "Self-taught Linux enthusiast focused on system administration, shell scripting, and IT infrastructure. CCNA candidate building hands-on projects.",
+        "url": "https://zero.ma/",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Marrakech",
+            "addressCountry": "Morocco"
+        },
+        "sameAs": [
+            "https://github.com/0x9z",
+            "https://linkedin.com/in/0x9z",
+            "https://medium.com/@0x9z",
+            "https://dev.to/0x9z",
+            "https://x.com/_0x9z",
+            "https://zero.ma"
+        ],
+        "knowsAbout": ["Linux", "System Administration", "Shell Scripting", "Networking", "CCNA", "IT Infrastructure", "Docker", "Cybersecurity"]
+    }
+    </script>
+</head>
+<body>
+    <!-- Skip Navigation Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loader">
+            <div class="loader-ring"></div>
+            <div class="loader-text">Loading...</div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="#home" class="nav-brand">
+                <span class="brand-icon">Z</span>
+                <span class="brand-text">Zero</span>
+            </a>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#certifications" class="nav-link">Certifications</a>
+                <a href="#contact" class="nav-link">Contact</a>
+		<a href="blog.zero.ma" class="nav-link">Blog</a>
+            </div>
+            
+            <div class="nav-controls">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon" aria-hidden="true"></i>
+                </button>
+                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-background">
+                <div class="hero-particles"></div>
+            </div>
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <div class="hero-greeting" data-aos="fade-up">
+                            <span class="greeting-text">Hello, I'm</span>
+                        </div>
+                        <h1 class="hero-title" data-aos="fade-up" data-aos-delay="100">
+                            <span class="title-main">Zero</span>
+                            <span class="title-sub">Linux & IT Infrastructure Specialist</span>
+                        </h1>
+                        <p class="hero-description" data-aos="fade-up" data-aos-delay="200">
+                            Self-taught Linux enthusiast focused on system administration, shell scripting, 
+                            and IT infrastructure. I learn by doing — one command at a time.
+                        </p>
+                        <div class="hero-stats" data-aos="fade-up" data-aos-delay="300">
+                            <div class="stat-item">
+                                <span class="stat-number">76+</span>
+                                <span class="stat-label">CCNA Labs Completed</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">13</span>
+                                <span class="stat-label">GitHub Repositories</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">2.7K</span>
+                                <span class="stat-label">LinkedIn Followers</span>
+                            </div>
+                        </div>
+                        <div class="hero-cta" data-aos="fade-up" data-aos-delay="400">
+                            <a href="#contact" class="btn btn-primary">
+                                <span>Get In Touch</span>
+                                <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                            </a>
+                            <a href="#projects" class="btn btn-secondary">
+                                <span>View My Work</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hero-visual" data-aos="fade-left" data-aos-delay="500">
+                        <div class="hero-image-wrapper">
+                            <div class="hero-image">
+                                <div class="profile-placeholder">
+                                    <span class="profile-initials">Zero</span>
+                                </div>
+                            </div>
+                            <div class="floating-elements">
+                                <div class="floating-tech">
+                                    <i class="fab fa-linux" aria-hidden="true"></i>
+                                </div>
+                                <div class="floating-tech">
+                                    <i class="fas fa-terminal" aria-hidden="true"></i>
+                                </div>
+                                <div class="floating-tech">
+                                    <i class="fas fa-network-wired" aria-hidden="true"></i>
+                                </div>
+                                <div class="floating-tech">
+                                    <i class="fab fa-python" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="scroll-arrow">
+                    <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-tag">About Me</span>
+                    <h2 class="section-title">Building IT Infrastructure</h2>
+                    <p class="section-subtitle">
+                        Dedicated to mastering Linux, networking, and infrastructure through hands-on experience
+                    </p>
+                </div>
+                
+                <div class="about-content">
+                    <div class="about-text" data-aos="fade-right">
+                        <div class="about-story">
+                            <p>
+                                As a self-taught Linux enthusiast based in Marrakech, I'm focused on system administration, 
+                                shell scripting, and IT infrastructure. My journey is driven by hands-on projects and 
+                                continuous learning — I learn by doing, one command at a time.
+                            </p>
+                            <p>
+                                Currently building practical tools and preparing for the CCNA certification. I specialize 
+                                in Linux systems, networking fundamentals, and creating open-source solutions that solve 
+                                real-world IT problems.
+                            </p>
+                            <p>
+                                My approach combines reverse-engineering curiosity with documentation — I break things 
+                                to understand them, then share what I learn through projects and content.
+                            </p>
+                        </div>
+                        
+                        <div class="about-highlights">
+                            <div class="highlight-item">
+                                <i class="fas fa-terminal" aria-hidden="true"></i>
+                                <div>
+                                    <h4>Current Focus</h4>
+                                    <p>CCNA Certification</p>
+                                    <p>Linux System Administration</p>
+                                </div>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-certificate" aria-hidden="true"></i>
+                                <div>
+                                    <h4>Certifications</h4>
+                                    <p>Cisco Certified</p>
+                                    <p>TCM Security Certified</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-visual" data-aos="fade-left">
+                        <div class="skills-preview">
+                            <div class="skill-category">
+                                <h4>Core Expertise</h4>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Linux</span>
+                                    <span class="skill-tag">Shell Scripting</span>
+                                    <span class="skill-tag">Networking</span>
+                                    <span class="skill-tag">IT Infrastructure</span>
+                                    <span class="skill-tag">Docker</span>
+                                </div>
+                            </div>
+                            <div class="skill-category">
+                                <h4>Technologies</h4>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Cisco</span>
+                                    <span class="skill-tag">TCM Security</span>
+                                    <span class="skill-tag">Python</span>
+                                    <span class="skill-tag">Bash</span>
+                                    <span class="skill-tag">Git</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-tag">Technical Skills</span>
+                    <h2 class="section-title">Expertise & Technologies</h2>
+                    <p class="section-subtitle">
+                        Comprehensive technical skills developed through hands-on projects and continuous learning
+                    </p>
+                </div>
+                
+                <div class="skills-grid">
+                    <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="skill-icon">
+                            <i class="fab fa-linux" aria-hidden="true"></i>
+                        </div>
+                        <h3>Linux Administration</h3>
+                        <p>System administration, shell scripting, and Linux server management</p>
+                        <div class="skill-tech">
+                            <span>Fedora</span>
+                            <span>Bash</span>
+                            <span>Systemd</span>
+                            <span>CLI</span>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="progress-bar" data-progress="85" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="skill-icon">
+                            <i class="fas fa-network-wired" aria-hidden="true"></i>
+                        </div>
+                        <h3>Networking</h3>
+                        <p>Network fundamentals, CCNA preparation, and infrastructure design</p>
+                        <div class="skill-tech">
+                            <span>Cisco</span>
+                            <span>CCNA</span>
+                            <span>OSI Model</span>
+                            <span>Subnetting</span>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="progress-bar" data-progress="90" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="skill-icon">
+                            <i class="fas fa-code" aria-hidden="true"></i>
+                        </div>
+                        <h3>Shell Scripting</h3>
+                        <p>Automation scripts, system monitoring, and task automation</p>
+                        <div class="skill-tech">
+                            <span>Bash</span>
+                            <span>Shell</span>
+                            <span>Automation</span>
+                            <span>Cron</span>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="progress-bar" data-progress="80" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="skill-icon">
+                            <i class="fab fa-python" aria-hidden="true"></i>
+                        </div>
+                        <h3>Programming</h3>
+                        <p>Python and JavaScript for tool development and automation</p>
+                        <div class="skill-tech">
+                            <span>Python</span>
+                            <span>JavaScript</span>
+                            <span>HTML/CSS</span>
+                            <span>Git</span>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="progress-bar" data-progress="75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-card" data-aos="fade-up" data-aos-delay="500">
+                        <div class="skill-icon">
+                            <i class="fab fa-docker" aria-hidden="true"></i>
+                        </div>
+                        <h3>Containers & DevOps</h3>
+                        <p>Docker containers and modern infrastructure practices</p>
+                        <div class="skill-tech">
+                            <span>Docker</span>
+                            <span>YAML</span>
+                            <span>CI/CD</span>
+                            <span>GitHub Actions</span>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="progress-bar" data-progress="70" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-card" data-aos="fade-up" data-aos-delay="600">
+                        <div class="skill-icon">
+                            <i class="fas fa-shield-alt" aria-hidden="true"></i>
+                        </div>
+                        <h3>Cybersecurity</h3>
+                        <p>Security fundamentals and ethical hacking basics</p>
+                        <div class="skill-tech">
+                            <span>TCM Security</span>
+                            <span>ISC2</span>
+                            <span>Security+</span>
+                            <span>Threat Analysis</span>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="progress-bar" data-progress="65" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-tag">Portfolio</span>
+                    <h2 class="section-title">Featured Projects & Tools</h2>
+                    <p class="section-subtitle">
+                        Practical tools and open-source projects built for IT professionals
+                    </p>
+                </div>
+                
+                <div class="projects-grid">
+                    <article class="project-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://github.com/0x9z/Cisco-CCNA-Labs" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View CCNA Labs">
+                                        <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="project-placeholder">
+                                <i class="fas fa-network-wired" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Cisco CCNA Labs</h3>
+                            <p>76 hands-on CCNA labs covering router security, VLANs, routing, NAT, ACLs, VPNs, and troubleshooting.</p>
+                            <div class="project-tech">
+                                <span>Cisco</span>
+                                <span>Packet Tracer</span>
+                                <span>VLANs</span>
+                                <span>OSPF</span>
+                            </div>
+                            <div class="project-stats">
+                                <div class="stat">
+                                    <span class="stat-value">76+</span>
+                                    <span class="stat-label">Labs Completed</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-value">MIT</span>
+                                    <span class="stat-label">License</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="project-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://github.com/0x9z/IPv4-subnet-calculator" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View IPv4 Subnet Calculator">
+                                        <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="project-placeholder">
+                                <i class="fas fa-calculator" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>IPv4 Subnet Calculator</h3>
+                            <p>A high-precision, single-file IPv4 Subnet Calculator with a luxury dark theme. Built for network engineers.</p>
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>CIDR</span>
+                            </div>
+                            <div class="project-stats">
+                                <div class="stat">
+                                    <span class="stat-value">Single-file</span>
+                                    <span class="stat-label">No Dependencies</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="project-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://github.com/0x9z/snake-detector" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View Snake Detector">
+                                        <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="project-placeholder">
+                                <i class="fas fa-eye" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Snake Detector</h3>
+                            <p>Track who doesn't follow YOU back on GitHub. 100% client-side tool to catch follow-unfollow scammers.</p>
+                            <div class="project-tech">
+                                <span>JavaScript</span>
+                                <span>GitHub API</span>
+                                <span>Dark Mode</span>
+                                <span>No Login</span>
+                            </div>
+                            <div class="project-stats">
+                                <div class="stat">
+                                    <span class="stat-value">100%</span>
+                                    <span class="stat-label">Client-side</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="project-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://github.com/0x9z/cv-builder" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View CV Builder">
+                                        <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="project-placeholder">
+                                <i class="fas fa-file-alt" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>CV Builder</h3>
+                            <p>Smart CV builder with field-specific questions for IT, Nursing, HR, Driving & more. Export clean PDF.</p>
+                            <div class="project-tech">
+                                <span>JavaScript</span>
+                                <span>PDF Export</span>
+                                <span>Vanilla JS</span>
+                            </div>
+                            <div class="project-stats">
+                                <div class="stat">
+                                    <span class="stat-value">Multi-field</span>
+                                    <span class="stat-label">Smart Builder</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="project-card" data-aos="fade-up" data-aos-delay="500">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://github.com/0x9z/Automated-Backup-Script" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View Backup Script">
+                                        <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="project-placeholder">
+                                <i class="fas fa-database" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Automated Backup Script</h3>
+                            <p>Automated backup script for Linux systems. Schedule and manage backups with ease.</p>
+                            <div class="project-tech">
+                                <span>Shell</span>
+                                <span>Bash</span>
+                                <span>Automation</span>
+                            </div>
+                            <div class="project-stats">
+                                <div class="stat">
+                                    <span class="stat-value">Linux</span>
+                                    <span class="stat-label">Automation</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="project-card" data-aos="fade-up" data-aos-delay="600">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://github.com/0x9z/system-monitor" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View System Monitor">
+                                        <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="project-placeholder">
+                                <i class="fas fa-chart-bar" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>System Monitor</h3>
+                            <p>Bash script to monitor CPU, Memory, and Disk usage on Linux systems.</p>
+                            <div class="project-tech">
+                                <span>Shell</span>
+                                <span>Monitoring</span>
+                                <span>Linux</span>
+                            </div>
+                            <div class="project-stats">
+                                <div class="stat">
+                                    <span class="stat-value">Real-time</span>
+                                    <span class="stat-label">Monitoring</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="experience">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-tag">Career Journey</span>
+                    <h2 class="section-title">Professional Experience</h2>
+                    <p class="section-subtitle">
+                        Self-taught journey through Linux, networking, and infrastructure
+                    </p>
+                </div>
+                
+                <div class="experience-track" role="list" aria-label="Professional experience">
+                    <article class="xp-card" role="listitem" data-aos="fade-up" data-aos-delay="50">
+                        <span class="xp-card__dot" aria-hidden="true"></span>
+                        <button class="xp-card__header" type="button" id="xp-toggle-homelab" aria-expanded="false" aria-controls="xp-panel-homelab">
+                            <span class="xp-card__logo" aria-hidden="true">
+                                <i class="fas fa-home"></i>
+                            </span>
+                            <span class="xp-card__company">Self-Taught & Homelab</span>
+                            <span class="xp-card__title">Networking</span>
+                            <span class="xp-card__date">2026 - Present</span>
+                        </button>
+		    <article class="xp-card" role="listitem" data-aos="fade-up" data-aos-delay="50">
+		        <span class="xp-card__dot" aria-hidden="true"></span>
+                        <button class="xp-card__header" type="button" id="xp-toggle-homelab" aria-expanded="false" aria-controls="xp-panel-homelab">
+                            <span class="xp-card__logo" aria-hidden="true">
+                                <i class="fas fa-home"></i>
+                            </span>
+                            <span class="xp-card__company">Self-Taught & Homelab</span>
+                            <span class="xp-card__title">Linux & IT Infrastructure</span>
+                            <span class="xp-card__date">2025 - Present</span>
+                        </button>
+                        <div class="xp-card__panel" id="xp-panel-homelab" role="region" aria-labelledby="xp-toggle-homelab" aria-hidden="true">
+                            <p class="xp-card__summary">Building hands-on projects and preparing for professional certifications. Learning by doing — one command at a time.</p>
+                            <ul class="xp-card__bullets">
+                                <li>Completed 76+ CCNA hands-on labs covering routing, switching, and security</li>
+                                <li>Developed IPv4 Subnet Calculator and Snake Detector tools</li>
+                                <li>Created automation scripts for Linux system administration</li>
+                                <li>Building interactive terminal portfolio at cybernetwork.technology</li>
+                            </ul>
+                            <div class="xp-card__skills" aria-label="Skills and tools">
+                                <div class="xp-skill-group">
+                                    <h3 class="xp-skill-group__title">Core Skills</h3>
+                                    <ul class="xp-skill-group__list">
+                                        <li>Linux Administration</li>
+                                        <li>Shell Scripting</li>
+                                        <li>Networking</li>
+                                    </ul>
+                                </div>
+                                <div class="xp-skill-group">
+                                    <h3 class="xp-skill-group__title">Tools</h3>
+                                    <ul class="xp-skill-group__list">
+                                        <li>Fedora</li>
+                                        <li>Docker</li>
+                                        <li>Git</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="xp-card" role="listitem" data-aos="fade-up" data-aos-delay="100">
+                        <span class="xp-card__dot" aria-hidden="true"></span>
+                        <button class="xp-card__header" type="button" id="xp-toggle-content" aria-expanded="false" aria-controls="xp-panel-content">
+                            <span class="xp-card__logo" aria-hidden="true">
+                                <i class="fas fa-pen"></i>
+                            </span>
+                            <span class="xp-card__company">Content Creation</span>
+                            <span class="xp-card__title">Technical Writer & Open Source</span>
+                            <span class="xp-card__date">2024 - Present</span>
+                        </button>
+                        <div class="xp-card__panel" id="xp-panel-content" role="region" aria-labelledby="xp-toggle-content" aria-hidden="true">
+                            <p class="xp-card__summary">Sharing knowledge through technical content, open-source projects, and community engagement.</p>
+                            <ul class="xp-card__bullets">
+                                <li>Publishing CCNA study guides and Linux tutorials</li>
+                                <li>Maintaining 13 open-source GitHub repositories</li>
+                                <li>Building tools for IT professionals</li>
+                                <li>Active on LinkedIn with 2.7K+ followers</li>
+                            </ul>
+                            <div class="xp-card__skills" aria-label="Skills and tools">
+                                <div class="xp-skill-group">
+                                    <h3 class="xp-skill-group__title">Core Skills</h3>
+                                    <ul class="xp-skill-group__list">
+                                        <li>Technical Writing</li>
+                                        <li>Open Source</li>
+                                    </ul>
+                                </div>
+                                <div class="xp-skill-group">
+                                    <h3 class="xp-skill-group__title">Platforms</h3>
+                                    <ul class="xp-skill-group__list">
+                                        <li>GitHub</li>
+                                        <li>LinkedIn</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="certifications">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-tag">Credentials</span>
+                    <h2 class="section-title">Professional Certifications</h2>
+                    <p class="section-subtitle">
+                        Continuous learning and professional development
+                    </p>
+                </div>
+                
+                <div class="certifications-grid">
+                    <div class="cert-category" data-aos="fade-up" data-aos-delay="100">
+                        <h3>In Progress</h3>
+                        <div class="cert-items">
+                            <div class="cert-item">
+                                <div class="cert-icon">
+                                    <i class="fas fa-network-wired" aria-hidden="true"></i>
+                                </div>
+                                <div class="cert-info">
+                                    <h4>Cisco Certified Network Associate (CCNA)</h4>
+                                    <span class="cert-date">In Progress</span>
+                                </div>
+                            </div>
+                            <div class="cert-item">
+                                <div class="cert-icon">
+                                    <i class="fas fa-shield-alt" aria-hidden="true"></i>
+                                </div>
+                                <div class="cert-info">
+                                    <h4>CompTIA Security+</h4>
+                                    <span class="cert-date">In Progress</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="cert-category" data-aos="fade-up" data-aos-delay="200">
+                        <h3>Completed</h3>
+                        <div class="cert-items">
+                            <div class="cert-item completed">
+                                <div class="cert-icon">
+                                    <i class="fab fa-linux" aria-hidden="true"></i>
+                                </div>
+                                <div class="cert-info">
+                                    <h4>Linux 100: Fundamentals</h4>
+                                    <span class="cert-date">TCM Security</span>
+                                </div>
+                            </div>
+                            <div class="cert-item completed">
+                                <div class="cert-icon">
+                                    <i class="fas fa-globe" aria-hidden="true"></i>
+                                </div>
+                                <div class="cert-info">
+                                    <h4>Introduction to Cybersecurity</h4>
+                                    <span class="cert-date">Cisco</span>
+                                </div>
+                            </div>
+                            <div class="cert-item completed">
+                                <div class="cert-icon">
+                                    <i class="fas fa-user-shield" aria-hidden="true"></i>
+                                </div>
+                                <div class="cert-info">
+                                    <h4>ISC2 Candidate</h4>
+                                    <span class="cert-date">ISC2</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-tag">Get In Touch</span>
+                    <h2 class="section-title">Let's Connect</h2>
+                </div>
+                
+                <div class="contact-content" data-aos="fade-up" data-aos-delay="100">
+                    <div class="contact-cta">
+                        <h3>Ready to collaborate?</h3>
+                        <p>Whether you're interested in Linux, networking, or open-source projects, I'd love to connect.</p>
+                        <div class="cta-buttons">
+                            <a href="mailto:contact@zero.ma" class="btn btn-primary">
+                                <i class="fas fa-envelope" aria-hidden="true"></i>
+                                Email Me
+                            </a>
+                            <a href="https://github.com/0x9z" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                                <i class="fab fa-github" aria-hidden="true"></i>
+                                GitHub
+                            </a>
+                            <a href="https://blog.zero.ma" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                                <i class="fab fa-Website" aria-hidden="true"></i>
+                                Blog
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <h4>Connect with me</h4>
+                        <div class="social-items">
+                            <a href="https://github.com/0x9z" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="https://linkedin.com/in/0x9z" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="https://medium.com/@0x9z" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Medium">
+                                <i class="fab fa-medium"></i>
+                                <span>Medium</span>
+                            </a>
+                            <a href="https://dev.to/0x9z" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Dev.to">
+                                <i class="fab fa-dev"></i>
+                                <span>Dev.to</span>
+                            </a>
+                            <a href="https://x.com/_0x9z" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                                <span>Twitter</span>
+                            </a>
+                            <a href="https://zero.ma" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Website">
+                                <i class="fas fa-globe"></i>
+                                <span>Website</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="brand-icon">Z</span>
+                    <span class="brand-text">Zero</span>
+                </div>
+                <p class="footer-text">
+                    I learn by doing — one command at a time.
+                </p>
+                <nav class="footer-links" aria-label="Footer navigation">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#certifications">Certifications</a>
+                    <a href="#contact">Contact</a>
+		    <a href="blog.zero.ma">Blog</a>
+                </nav>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Zero. All rights reserved.</p>
+                <p>Designed & Developed with <i class="fas fa-heart" aria-hidden="true"></i></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="script.js" defer></script>
+</body>
+</html>
