@@ -16,7 +16,7 @@ My personal portfolio & blog — Linux, Networking, and IT Infrastructure.
 
 ## 📄 License
 
-MIT License — see [LICENSE](LICENSE) file.
+MIT License — see [LICENSE](https://github.com/0x9z/Zero/blob/main/LICENSE) file.
 
 ## 🔗 Connect
 
