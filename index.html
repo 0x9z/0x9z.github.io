@@ -102,37 +102,70 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="apple-touch-icon" href="favicon.svg">
     
-    <!-- Structured Data for SEO -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
+<!-- Person Schema -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Zero",
+    "alternateName": "0x9z",
+    "givenName": "Anas",
+    "familyName": "Ait Baani",
+    "jobTitle": "Linux & IT Infrastructure Specialist",
+    "description": "Self-taught Linux enthusiast focused on system administration, shell scripting, IT infrastructure, and networking. CCNA candidate building hands-on projects.",
+    "url": "https://zero.ma",
+    "image": "https://zero.ma/favicon.svg",
+    "email": "contact@zero.ma",
+    "knowsAbout": [
+        "Linux Administration",
+        "Shell Scripting",
+        "Networking",
+        "CCNA",
+        "IT Infrastructure",
+        "System Administration",
+        "Cybersecurity",
+        "Docker",
+        "Python",
+        "Bash",
+        "Git",
+        "GitHub Actions"
+    ],
+    "knowsLanguage": ["en", "ar"],
+    "sameAs": [
+        "https://github.com/0x9z",
+        "https://linkedin.com/in/0x9z",
+        "https://medium.com/@0x9z",
+        "https://dev.to/0x9z",
+        "https://twitter.com/_0x9z"
+    ],
+    "workStatus": "Open to work"
+}
+</script>
+
+<!-- WebSite Schema -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Zero Portfolio",
+    "url": "https://zero.ma",
+    "description": "Linux & IT Infrastructure Specialist portfolio with blog, tools, and premium template.",
+    "inLanguage": "en",
+    "publisher": {
         "@type": "Person",
         "name": "Zero",
-        "jobTitle": "Linux & IT Infrastructure Specialist",
-        "description": "Self-taught Linux enthusiast focused on system administration, shell scripting, and IT infrastructure. CCNA candidate building hands-on projects.",
-        "url": "https://zero.ma/",
-        "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Marrakech",
-            "addressCountry": "Morocco"
-        },
-        "sameAs": [
-            "https://github.com/0x9z",
-            "https://linkedin.com/in/0x9z",
-            "https://medium.com/@0x9z",
-            "https://dev.to/0x9z",
-            "https://x.com/_0x9z",
-            "https://zero.ma"
-        ],
-        "knowsAbout": ["Linux", "System Administration", "Shell Scripting", "Networking", "CCNA", "IT Infrastructure", "Docker", "Cybersecurity"]
+        "url": "https://zero.ma"
     }
-    </script>
-	<script type="application/ld+json">
+}
+</script>
+
+<!-- Product Schema (Template) -->
+<script type="application/ld+json">
 {
     "@context": "https://schema.org",
     "@type": "Product",
     "name": "Zero Portfolio Template — Black & White",
-    "description": "Clean, minimal portfolio template for IT professionals. 99/100 PageSpeed, SEO optimized, dark mode, blog integration.",
+    "description": "Clean, minimal portfolio template for IT professionals. 99/100 PageSpeed, 100/100 SEO, dark mode, blog integration, AI-ready.",
     "brand": {
         "@type": "Brand",
         "name": "Zero"
@@ -144,11 +177,45 @@
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock"
     },
-    "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5",
-        "reviewCount": "1"
+    "keywords": "portfolio template, IT portfolio, black and white theme, network engineer portfolio, Linux portfolio"
+}
+</script>
+
+<!-- Blog Schema -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Zero's Notes",
+    "url": "https://blog.zero.ma",
+    "description": "Linux, Networking, Shell Scripting, and IT Infrastructure tutorials.",
+    "author": {
+        "@type": "Person",
+        "name": "Zero",
+        "url": "https://zero.ma"
     }
+}
+</script>
+
+<!-- Breadcrumb Schema -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://zero.ma"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://blog.zero.ma"
+        }
+    ]
 }
 </script>
 </head>
