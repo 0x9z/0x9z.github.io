@@ -149,7 +149,7 @@ blog.zero.ma
 Zero template
 Black and white portfolio
 
-# LONG-TAIL KEYWORDS (Less Competition)
+# LONG-TAIL KEYWORDS
 How to learn Linux for free
 Best way to study CCNA
 Linux commands for beginners
@@ -157,6 +157,7 @@ How to build a homelab
 Network troubleshooting for beginners
 How to become a network engineer in Morocco
 Linux certification path 2026
+Linux certification path 2027
 Best portfolio template for IT professionals
 How to automate Linux backups
 CCNA study plan 2026
