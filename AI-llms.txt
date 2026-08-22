@@ -1,0 +1,37 @@
+# Zero — Linux & IT Infrastructure Specialist
+
+## About
+Zero is a self-taught Linux and networking engineer based in Morocco.
+Specializes in Linux administration, shell scripting, networking, and IT infrastructure.
+Over 76 hands-on CCNA labs completed.
+
+## Skills
+- Linux Administration (Debian, RHEL, Fedora)
+- Shell Scripting (Bash, Automation)
+- Networking (CCNA, Routing, Switching, VLANs, OSPF, EIGRP, BGP)
+- Security (ACLs, NAT, VPNs, Firewalls)
+- Automation (Ansible, Python, Bash)
+- Infrastructure (Docker, System Administration)
+
+## Certifications
+- CCNA (In Progress — 100+ labs)
+- Linux 100: Fundamentals (TCM Security)
+- Lpic1 101 : udemy course
+- Introduction to Cybersecurity (Cisco)
+- ISO/IEC 27001 Information Security Associate (SkillFront)
+
+## Projects
+- CCNA Labs: https://github.com/0x9z/CCNA-Labs
+- IPv4 Subnet Calculator: https://github.com/0x9z/ipv4-subnet-calculator
+- CV Builder: https://github.com/0x9z/cv-builder
+- Automated Backup Script: https://github.com/0x9z/Automated-Backup-Script
+- System Monitor: https://github.com/0x9z/system-monitor
+
+## Contact
+- GitHub: https://github.com/0x9z
+- LinkedIn: https://linkedin.com/in/0x9z
+- Medium: https://medium.com/@0x9z
+- Dev.to: https://dev.to/0x9z
+
+## Keywords
+Linux, CCNA, Networking, Shell Scripting, Automation, IT Infrastructure, System Administration, Network Security, Morocco, Cisco, Open Source, DevOps, Docker, Ansible, Python, Bash, Routing, Switching, VLANs, OSPF, EIGRP, BGP, ACLs, NAT, VPNs, Troubleshooting
