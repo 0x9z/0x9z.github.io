@@ -180,7 +180,7 @@
             height: 100%;
             z-index: 0;
             pointer-events: none;
-            opacity: 0.3;
+            opacity: 0.65;
         }
 
         /* ============ MAIN CONTENT ============ */
@@ -456,6 +456,325 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
+
+        /* ============ ADAPTIVE RESPONSIVE LAYOUT ============ */
+        .content {
+            min-height: 100vh;
+            height: 100dvh;
+            padding: clamp(90px, 11vh, 120px) clamp(28px, 5vw, 80px) clamp(55px, 7vh, 75px);
+            gap: clamp(30px, 5vw, 80px);
+        }
+
+        .left-section {
+            min-width: 0;
+        }
+
+        .hello-name {
+            font-size: clamp(2.8rem, 5.2vw, 4.5rem);
+        }
+
+        .hello-desc {
+            max-width: 560px;
+        }
+
+        .right-section {
+            min-width: 0;
+        }
+
+        .hero-image {
+            width: clamp(280px, 34vw, 450px);
+            height: clamp(280px, 34vw, 450px);
+        }
+
+        .profile-initials {
+            font-size: clamp(5rem, 8vw, 8rem);
+        }
+
+        /* Short laptop screens such as 1366x768 */
+        @media (min-width: 901px) and (max-height: 850px) {
+            .content {
+                padding-top: 82px;
+                padding-bottom: 48px;
+                gap: clamp(24px, 3vw, 55px);
+            }
+
+            .hero-image {
+                width: min(37vh, 380px);
+                height: min(37vh, 380px);
+            }
+
+            .profile-initials {
+                font-size: min(10vh, 6.5rem);
+            }
+
+            .hello-line {
+                margin-bottom: 8px;
+            }
+
+            .hello-name {
+                margin-bottom: 8px;
+                font-size: clamp(2.6rem, 5vw, 4rem);
+            }
+
+            .hello-role {
+                margin-bottom: 18px;
+            }
+
+            .hello-desc {
+                margin-bottom: 25px;
+                line-height: 1.6;
+            }
+
+            .hero-btns {
+                margin-bottom: 28px;
+            }
+
+            .btn {
+                padding: 14px 28px;
+            }
+
+            .socials a {
+                width: 48px;
+                height: 48px;
+            }
+
+            .floating-elements {
+                inset: -24px;
+            }
+
+            .floating-tech {
+                width: 48px;
+                height: 48px;
+                font-size: 19px;
+            }
+
+            .bottom-text {
+                bottom: 14px;
+            }
+        }
+
+        /* Small laptops / tablets in landscape */
+        @media (min-width: 701px) and (max-width: 1100px) {
+            .content {
+                gap: 25px;
+                padding-left: 35px;
+                padding-right: 35px;
+            }
+
+            .left-section {
+                max-width: 500px;
+            }
+
+            .hero-image {
+                width: min(34vw, 340px);
+                height: min(34vw, 340px);
+            }
+
+            .hello-name {
+                font-size: clamp(2.6rem, 5vw, 3.8rem);
+            }
+
+            .hello-desc {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Phones and narrow portrait screens */
+        @media (max-width: 700px) {
+            html, body {
+                min-height: 100%;
+                height: auto;
+                overflow-x: hidden;
+                overflow-y: auto;
+            }
+
+            .content {
+                min-height: 100svh;
+                height: auto;
+                flex-direction: column;
+                justify-content: flex-start;
+                gap: 18px;
+                padding: 88px 20px 72px;
+            }
+
+            .left-section {
+                flex: none;
+                width: 100%;
+                max-width: 600px;
+                text-align: center;
+                order: 1;
+            }
+
+            .right-section {
+                flex: none;
+                width: 100%;
+                max-width: 600px;
+                order: 2;
+            }
+
+            .hello-line {
+                margin-bottom: 8px;
+                font-size: 0.95rem;
+            }
+
+            .hello-name {
+                margin-bottom: 10px;
+                font-size: clamp(2.5rem, 12vw, 4rem);
+            }
+
+            .hello-role {
+                margin-bottom: 16px;
+                font-size: clamp(0.72rem, 3vw, 0.95rem);
+                line-height: 1.5;
+            }
+
+            .hello-desc {
+                max-width: 520px;
+                margin: 0 auto 22px;
+                font-size: 0.82rem;
+                line-height: 1.65;
+            }
+
+            .hero-btns {
+                justify-content: center;
+                margin-bottom: 22px;
+                gap: 10px;
+            }
+
+            .btn {
+                padding: 13px 20px;
+                font-size: 0.68rem;
+                letter-spacing: 1.8px;
+            }
+
+            .socials {
+                justify-content: center;
+                gap: 9px;
+            }
+
+            .socials a {
+                width: 43px;
+                height: 43px;
+                font-size: 0.95rem;
+            }
+
+            .hero-visual {
+                width: 100%;
+            }
+
+            .hero-image {
+                width: clamp(175px, 48vw, 240px);
+                height: clamp(175px, 48vw, 240px);
+                border-width: 5px;
+            }
+
+            .profile-initials {
+                font-size: clamp(2.5rem, 14vw, 4.5rem);
+            }
+
+            .floating-elements {
+                inset: -18px;
+            }
+
+            .floating-tech {
+                width: 40px;
+                height: 40px;
+                font-size: 16px;
+            }
+
+            .floating-tech:nth-child(1) {
+                top: 0;
+                left: 5px;
+            }
+
+            .floating-tech:nth-child(2) {
+                top: 22px;
+                right: 0;
+            }
+
+            .floating-tech:nth-child(3) {
+                bottom: 18px;
+                left: 0;
+            }
+
+            .floating-tech:nth-child(4) {
+                bottom: 0;
+                right: 8px;
+            }
+
+            .logo-top-left {
+                top: 18px;
+                left: 20px;
+            }
+
+            .logo-top-left .zero-text {
+                font-size: 1.45rem;
+                letter-spacing: 5px;
+            }
+
+            .theme-toggle {
+                top: 17px;
+                right: 20px;
+                width: 40px;
+                height: 40px;
+            }
+
+            .bottom-text {
+                position: fixed;
+                left: 10px;
+                right: 10px;
+                bottom: 10px;
+                font-size: 0.47rem;
+                letter-spacing: 1.2px;
+                line-height: 1.4;
+            }
+        }
+
+        /* Very short phones: prioritize keeping everything readable */
+        @media (max-width: 700px) and (max-height: 700px) {
+            .content {
+                padding-top: 75px;
+                padding-bottom: 58px;
+                gap: 10px;
+            }
+
+            .hello-desc {
+                margin-bottom: 14px;
+                line-height: 1.5;
+            }
+
+            .hero-btns {
+                margin-bottom: 13px;
+            }
+
+            .hero-image {
+                width: 155px;
+                height: 155px;
+            }
+
+            .floating-tech {
+                width: 34px;
+                height: 34px;
+                font-size: 14px;
+            }
+
+            .socials a {
+                width: 38px;
+                height: 38px;
+            }
+        }
+
+        /* Respect reduced-motion accessibility preferences */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                scroll-behavior: auto !important;
+            }
+        }
+
         /* ============ RESPONSIVE ============ */
         @media (max-width: 900px) {
             .content {
@@ -512,7 +831,7 @@
     </button>
 
     <!-- Binary Rain Background -->
-    <div id="binary-bg"></div>
+    <canvas id="binary-bg" aria-hidden="true"></canvas>
 
     <!-- Neural Network Canvas -->
     <canvas id="neural-bg"></canvas>
@@ -697,8 +1016,8 @@
                     const dx = nodes[i].x - nodes[j].x;
                     const dy = nodes[i].y - nodes[j].y;
                     const dist = Math.sqrt(dx * dx + dy * dy);
-                    if (dist < 160) {
-                        const opacity = (1 - dist / 160) * 0.25;
+                    if (dist < 200) {
+                        const opacity = (1 - dist / 160) * 0.55;
                         neuralCtx.beginPath();
                         neuralCtx.moveTo(nodes[i].x, nodes[i].y);
                         neuralCtx.lineTo(nodes[j].x, nodes[j].y);
@@ -737,9 +1056,9 @@
         requestAnimationFrame(drawNeural);
         
         // ============ CONSOLE ============
-        console.log('%cZERO | SYSTEM ONLINE', 'color: #ffffff; font-size: 16px; font-weight: bold;');
-        console.log('%cStatus: Operating in silence', 'color: #555555; font-size: 11px;');
-        console.log('%cSomething is coming.', 'color: #333333; font-size: 11px; font-style: italic;');
+        console.log('%cZERO | SYSTEM ONLINE', 'font-size: 16px; font-weight: bold;');
+        console.log('%cStatus: Operating in silence', 'font-size: 11px;');
+        console.log('%cSomething is coming.', 'font-size: 11px; font-style: italic;');
     </script>
 </body>
 </html>
