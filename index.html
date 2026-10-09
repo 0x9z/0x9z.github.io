@@ -7,7 +7,7 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <title>Anas Ait Baani (Zero) — Linux & IT Infrastructure Specialist</title>
+    <title>Zero — Linux & IT Infrastructure Specialist</title>
     <meta name="description" content="Zero - Linux & IT Infrastructure Specialist. Networking, Shell Scripting, CCNA Candidate, and Homelab Enthusiast. Based in Marrakech, Morocco.">
     <meta name="keywords" content="Linux, IT Infrastructure, Networking, Shell Scripting, CCNA, Cisco, TCM Security, Homelab, Morocco, Zero">
     <meta name="author" content="Anas Ait Baani (Zero)">
@@ -73,6 +73,212 @@
 .brand-icon {
     font-weight: 800 !important;
     font-size: 20px !important;
+}
+
+
+.project-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: transform 0.4s ease;
+}
+.project-card:hover .project-img {
+    transform: scale(1.04);
+}
+
+
+.project-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 1.2rem;
+    padding: 10px 20px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #000000;
+    background: #ffffff;
+    border: none;
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    width: 100%;
+    text-align: center;
+    transition: background 0.2s, color 0.2s;
+}
+.project-btn:hover {
+    background: #e0e0e0;
+    color: #000000;
+}
+.project-btn i { font-size: 13px; }
+
+
+.projects-category-label {
+    grid-column: 1 / -1;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #ffffff;
+    padding: 8px 16px;
+    background: #ffffff;
+    color: #000000;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+
+
+
+
+/* Pagination */
+.projects-pagination-wrapper { width: 100%; }
+.pagination-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(128,128,128,0.3);
+}
+.pag-btn {
+    background: #ffffff;
+    border: 2px solid #000000;
+    color: #000000;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 10px 24px;
+    cursor: pointer;
+    letter-spacing: 0.05em;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+.pag-btn:hover:not(:disabled) {
+    background: #000000;
+    color: #ffffff;
+    border-color: #ffffff;
+}
+.pag-btn:disabled {
+    background: #cccccc;
+    border-color: #aaaaaa;
+    color: #888888;
+    cursor: default;
+}
+.pag-info {
+    font-family: 'DM Mono', monospace;
+    font-size: 13px;
+    font-weight: 600;
+    color: #888888;
+    background: rgba(128,128,128,0.1);
+    padding: 6px 14px;
+    border: 1px solid rgba(128,128,128,0.3);
+    letter-spacing: 0.1em;
+    min-width: 60px;
+    text-align: center;
+}
+
+
+.pag-card { display: block; }
+.pag-card[style*="display: none"] { display: none !important; }
+
+
+/* Blog / Writing section */
+.blog-section { padding: 6rem 0; border-top: 1px solid var(--gray-200); }
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    margin-bottom: 2.5rem;
+}
+.blog-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    text-decoration: none;
+    overflow: hidden;
+    transition: border-color 0.2s, transform 0.2s;
+}
+.blog-card:hover {
+    border-color: var(--black);   /* ← frame matches theme */
+    transform: translateY(-3px);
+}
+.blog-card__img-wrap {
+    position: relative;
+    width: 100%;
+    padding-top: 56%;
+    overflow: hidden;
+    background: var(--gray-100);
+}
+.blog-card__img {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+.blog-card:hover .blog-card__img { transform: scale(1.04); }
+.blog-card__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.4), transparent);
+}
+.blog-card__body {
+    padding: 1.1rem 1.2rem 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex: 1;
+}
+.blog-card__date {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: var(--gray-400);
+    letter-spacing: 0.08em;
+}
+.blog-card__title {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--black);          /* ← title matches theme */
+    line-height: 1.5;
+    flex: 1;
+}
+.blog-card__read {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--gray-500);       /* ← read link matches theme */
+    margin-top: auto;
+    transition: color 0.2s;
+}
+.blog-card:hover .blog-card__read { color: var(--black); }
+
+/* Blog CTA */
+.blog-cta { text-align: center; margin-top: 2rem; }
+.blog-cta-btn {
+    display: inline-block;
+    padding: 20px 42px;
+    background: #ffffff;
+    color: #000000;
+    font-size: 16px;
+    font-weight: 900;
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    border: 3px solid #000000;
+    border-radius: 8px;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+.blog-cta-btn:hover {
+    background: #000000;
+    color: #ffffff;
+    border-color: #000000;
+}
+
+@media (max-width: 768px) {
+    .blog-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+    .blog-grid { grid-template-columns: 1fr; }
 }
 
 </style>
@@ -734,7 +940,7 @@ section {
 }
 
 /* Projects Section */
-.projects-grid {
+.projects-grid { grid-template-columns: repeat(3, 1fr) !important; /* 3x2 pagination */ /* orig: */
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
@@ -1267,7 +1473,7 @@ section {
 /* Responsive */
 @media (max-width: 1024px) {
     .skills-grid,
-    .projects-grid {
+    .projects-grid { grid-template-columns: repeat(3, 1fr) !important; /* 3x2 pagination */ /* orig: */
         grid-template-columns: repeat(2, 1fr);
     }
     
@@ -1388,6 +1594,166 @@ section {
         justify-content: center;
     }
 }
+
+/* ============================================
+   Timeline / Journey Section
+   ============================================ */
+.journey {
+    padding: 100px 0;
+    background: var(--white);
+    border-top: 1px solid var(--gray-200);
+}
+
+.timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* The vertical line */
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--gray-200);
+    transform: translateX(-50%);
+}
+
+/* Each timeline item */
+.timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 0 40px 40px 0;
+    margin-bottom: 20px;
+}
+
+.timeline-item:nth-child(even) {
+    margin-left: 50%;
+    padding: 0 0 40px 40px;
+}
+
+/* The dot on the line */
+.timeline-dot {
+    position: absolute;
+    top: 24px;
+    width: 16px;
+    height: 16px;
+    background: var(--black);
+    border: 3px solid var(--white);
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px var(--black);
+    z-index: 2;
+}
+
+.timeline-item:nth-child(odd) .timeline-dot {
+    right: -8px;
+}
+
+.timeline-item:nth-child(even) .timeline-dot {
+    left: -8px;
+}
+
+/* The date label */
+.timeline-date {
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--black);
+    margin-bottom: 12px;
+}
+
+.timeline-item:nth-child(odd) .timeline-date {
+    text-align: right;
+}
+
+/* The card */
+.timeline-card {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--border-radius);
+    padding: 24px;
+    transition: var(--transition);
+}
+
+.timeline-card:hover {
+    border-color: var(--black);
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-3px);
+}
+
+/* Small tag inside the card */
+.timeline-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--white);
+    background: var(--black);
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+}
+
+.timeline-card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: 4px;
+    line-height: 1.3;
+}
+
+.timeline-place {
+    font-size: 13px;
+    color: var(--gray-400);
+    margin-bottom: 12px;
+}
+
+.timeline-card p:not(.timeline-place) {
+    font-size: 14px;
+    color: var(--gray-500);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ---- Mobile: single column, line on the left ---- */
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 20px;
+    }
+
+    .timeline-item,
+    .timeline-item:nth-child(even) {
+        width: 100%;
+        margin-left: 0;
+        padding: 0 0 32px 50px;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-dot,
+    .timeline-item:nth-child(even) .timeline-dot {
+        left: 12px;
+        right: auto;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-date {
+        text-align: left;
+    }
+
+    .timeline-card {
+        padding: 20px;
+    }
+
+    .timeline-card h3 {
+        font-size: 16px;
+    }
+}
+
 </style>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"></noscript>
@@ -1440,7 +1806,7 @@ section {
     <!-- Navigation -->
     <nav class="navbar" id="navbar" aria-label="Main navigation">
         <div class="nav-container">
-            <a href="#home" class="nav-brand">
+            <a href="zero.ma" class="nav-brand">
                 <span class="brand-icon">Z</span>
                 <span class="brand-text">Zero</span>
             </a>
@@ -1448,9 +1814,10 @@ section {
             <div class="nav-menu" id="nav-menu">
                 <a href="#home" class="nav-link active">Home</a>
                 <a href="#about" class="nav-link">About</a>
-                <a href="#skills" class="nav-link">Skills</a>
+                
                 <a href="#projects" class="nav-link">Projects</a>
-                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#blog" class="nav-link">Writing</a>
+                
                 
                 <a href="#contact" class="nav-link">Contact</a>
 		<a href="https://blog.zero.ma" class="nav-link">Blog</a>
@@ -1479,9 +1846,6 @@ section {
             <div class="container">
                 <div class="hero-content">
                     <div class="hero-text">
-                        <div class="hero-greeting" data-aos="fade-up">
-                            <span class="greeting-text">Hello, I'm</span>
-                        </div>
                         <h1 class="hero-title" data-aos="fade-up" data-aos-delay="100">
                             <span class="title-main">Zero</span>
                             <span class="title-real-name">Anas Ait Baani</span>
@@ -1490,20 +1854,7 @@ section {
                         <p class="hero-description" data-aos="fade-up" data-aos-delay="200">
                             Self-taught Linux & network security enthusiast based in Marrakech. Everything I know, I built alone — one command at a time.
                         </p>
-                        <div class="hero-stats" data-aos="fade-up" data-aos-delay="300">
-                            <div class="stat-item">
-                                <span class="stat-number">76+</span>
-                                <span class="stat-label">CCNA Labs Completed</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number">13</span>
-                                <span class="stat-label">GitHub Repositories</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number">2.7K</span>
-                                <span class="stat-label">LinkedIn Followers</span>
-                            </div>
-                        </div>
+                        
                         <div class="hero-cta" data-aos="fade-up" data-aos-delay="400">
                             <a href="#contact" class="btn btn-primary">
                                 <span>Get In Touch</span>
@@ -1550,7 +1901,6 @@ section {
         <section id="about" class="about">
             <div class="container">
                 <div class="section-header" data-aos="fade-up">
-                    <span class="section-tag">About Me</span>
                     <h2 class="section-title">Building IT Infrastructure</h2>
                     <p class="section-subtitle">
                         Dedicated to mastering Linux, networking, and infrastructure through hands-on experience
@@ -1561,19 +1911,13 @@ section {
                     <div class="about-text" data-aos="fade-right">
                         <div class="about-story">
                             <p>
-                                Everything I know, I built alone. No mentors. No courses paid by someone else.
-                                Just me, my own money, countless hours, and an unshakeable belief that I could
-                                figure it out — one problem at a time.
+                                Everything I know, I built alone. No mentors. No shortcuts. Just documentation, real labs, and an obsession with understanding how systems work at the lowest level.
                             </p>
                             <p>
-                                I taught myself Linux, networking, and security from the ground up —
-                                through documentation, labs, failures, and trying again. Every skill I have
-                                was earned, not handed to me.
+                                I taught myself Linux and networking from scratch — through failures, trying again, and building in public. Every skill I have was earned, not handed to me.
                             </p>
                             <p>
-                                Today I'm focused on network security and Linux administration —
-                                running hands-on labs, building real projects, and documenting everything
-                                publicly at zero.ma and GitHub.
+                                Open to entry-level roles in IT Support, Network Administration, and Systems Engineering — in Morocco or abroad.
                             </p>
                         </div>
                         
@@ -1625,343 +1969,530 @@ section {
             </div>
         </section>
 
-        <!-- Skills Section -->
-        <section id="skills" class="skills">
-            <div class="container">
-                <div class="section-header" data-aos="fade-up">
-                    <span class="section-tag">Technical Skills</span>
-                    <h2 class="section-title">Expertise & Technologies</h2>
-                    <p class="section-subtitle">
-                        Comprehensive technical skills developed through hands-on projects and continuous learning
+	
+	
+	<!-- Timeline / Journey Section -->
+<section id="journey" class="journey">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <span class="section-tag">My Path</span>
+            <h2 class="section-title">The Journey</h2>
+            <p class="section-subtitle">
+                From electrical wiring in Biougra to network routing in Marrakech — one step at a time.
+            </p>
+        </div>
+
+        <div class="timeline">
+            <!-- 2021 -->
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2021 — 2022</div>
+                <div class="timeline-card">
+                    <span class="timeline-tag">Diploma</span>
+                    <h3>Électricien des bâtiments</h3>
+                    <p class="timeline-place">OFPPT · Chtouka Ait Baha</p>
+                    <p>
+                        Two-year diploma in building electricity. Learned wiring,
+                        schematics, safety standards, and how to build things with
+                        my hands — and debug them when they break.
                     </p>
                 </div>
-                
-                <div class="skills-grid">
-                    <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="skill-icon">
-                            <i class="fab fa-linux" aria-hidden="true"></i>
-                        </div>
-                        <h3>Linux Administration</h3>
-                        <p>System administration, shell scripting, and Linux server management</p>
-                        <div class="skill-tech">
-                            <span>Fedora</span>
-                            <span>Bash</span>
-                            <span>Systemd</span>
-                            <span>CLI</span>
-                        </div>
-                        <div class="skill-progress">
-                            <div class="progress-bar" data-progress="85" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="skill-icon">
-                            <i class="fas fa-network-wired" aria-hidden="true"></i>
-                        </div>
-                        <h3>Networking</h3>
-                        <p>TCP/IP, routing & switching, BGP, EIGRP, subnetting, and Packet Tracer labs</p>
-                        <div class="skill-tech">
-                            <span>Cisco</span>
-                            <span>CCNA</span>
-                            <span>OSI Model</span>
-                            <span>Subnetting</span>
-                        </div>
-                        <div class="skill-progress">
-                            <div class="progress-bar" data-progress="90" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-card" data-aos="fade-up" data-aos-delay="300">
-                        <div class="skill-icon">
-                            <i class="fas fa-code" aria-hidden="true"></i>
-                        </div>
-                        <h3>Shell Scripting</h3>
-                        <p>Automation scripts, system monitoring, and task automation</p>
-                        <div class="skill-tech">
-                            <span>Bash</span>
-                            <span>Shell</span>
-                            <span>Automation</span>
-                            <span>Cron</span>
-                        </div>
-                        <div class="skill-progress">
-                            <div class="progress-bar" data-progress="80" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-card" data-aos="fade-up" data-aos-delay="400">
-                        <div class="skill-icon">
-                            <i class="fab fa-python" aria-hidden="true"></i>
-                        </div>
-                        <h3>Programming</h3>
-                        <p>Python and JavaScript for tool development and automation</p>
-                        <div class="skill-tech">
-                            <span>Python</span>
-                            <span>JavaScript</span>
-                            <span>HTML/CSS</span>
-                            <span>Git</span>
-                        </div>
-                        <div class="skill-progress">
-                            <div class="progress-bar" data-progress="75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-card" data-aos="fade-up" data-aos-delay="500">
-                        <div class="skill-icon">
-                            <i class="fab fa-docker" aria-hidden="true"></i>
-                        </div>
-                        <h3>Containers & DevOps</h3>
-                        <p>Docker containers and modern infrastructure practices</p>
-                        <div class="skill-tech">
-                            <span>Docker</span>
-                            <span>YAML</span>
-                            <span>CI/CD</span>
-                            <span>GitHub Actions</span>
-                        </div>
-                        <div class="skill-progress">
-                            <div class="progress-bar" data-progress="70" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-card" data-aos="fade-up" data-aos-delay="600">
-                        <div class="skill-icon">
-                            <i class="fas fa-shield-alt" aria-hidden="true"></i>
-                        </div>
-                        <h3>Cybersecurity</h3>
-                        <p>Network security, ISO/IEC 27001, and security fundamentals</p>
-                        <div class="skill-tech">
-                            <span>TCM Security</span>
-                            <span>ISC2</span>
-                            <span>Security+</span>
-                            <span>Threat Analysis</span>
-                        </div>
-                        <div class="skill-progress">
-                            <div class="progress-bar" data-progress="65" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
+            </div>
+
+            <!-- 2022 -->
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="150">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2022 — 2023</div>
+                <div class="timeline-card">
+                    <span class="timeline-tag">Work</span>
+                    <h3>Électricien des bâtiments</h3>
+                    <p class="timeline-place">Self-employed · Chtouka Ait Baha</p>
+                    <p>
+                        One year working in the trade. Real jobs, real clients,
+                        real deadlines. Learned what it means to finish what
+                        you start — no excuses.
+                    </p>
                 </div>
             </div>
-        </section>
 
+            <!-- 2023 -->
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2023 — 2025</div>
+                <div class="timeline-card">
+                    <span class="timeline-tag">Diploma</span>
+                    <h3>Technicien de gestion informatisée</h3>
+                    <p class="timeline-place">IJAS Institute · Chtouka Ait Baha</p>
+                    <p>
+                        Two-year diploma in computerized management. First real
+                        contact with IT systems — Microsoft Office, databases,
+                        business data processing. The curiosity started here.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Nov 2025 -->
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="250">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">Nov — Dec 2025</div>
+                <div class="timeline-card">
+                    <span class="timeline-tag">Internship</span>
+                    <h3>Administrative &amp; Data Processing</h3>
+                    <p class="timeline-place">Various Accounting Cabinets · Marrakech</p>
+                    <p>
+                        Moved to Marrakech for a two-month internship across several
+                        accounting cabinets — invoice processing, CNSS employee data
+                        entry, tax filings. First taste of real enterprise workflows.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Aug 2025 -->
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">Aug 2025 — Now</div>
+                <div class="timeline-card">
+                    <span class="timeline-tag">Self-Taught</span>
+                    <h3>Linux &amp; Network Security</h3>
+                    <p class="timeline-place">Independent · Marrakech</p>
+                    <p>
+                        Teaching myself Linux, networking, and security from the
+                        ground up. Building Cisco Packet Tracer labs, writing
+                        articles, and documenting everything publicly —
+                        one command at a time.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+	
+	
+	
+	
         <!-- Projects Section -->
         <section id="projects" class="projects">
             <div class="container">
                 <div class="section-header" data-aos="fade-up">
-                    <span class="section-tag">Portfolio</span>
                     <h2 class="section-title">Featured Projects & Tools</h2>
                     <p class="section-subtitle">
                         Practical tools and open-source projects built for IT professionals
                     </p>
                 </div>
                 
-                <div class="projects-grid">
-                    <article class="project-card" data-aos="fade-up" data-aos-delay="100">
+                
+
+<div class="projects-pagination-wrapper">
+  <div class="pag-category-label" id="pag-label-tools">Tools &amp; Web Projects</div>
+  <div class="pag-category-label" id="pag-label-cisco" style="display:none">Cisco Networking Labs</div>
+  <div class="projects-grid" id="projects-grid">
+<div class="pag-card" data-index="0"><article class="project-card" data-aos="fade-up" data-aos-delay="100">
                         <div class="project-image">
                             <div class="project-overlay"><div class="project-links">
                                 <a href="https://zero.ma" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="https://github.com/0x9z" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i></a>
                             </div></div>
                             <div class="project-placeholder"><i class="fas fa-globe"></i></div>
                         </div>
                         <div class="project-content">
                             <h3>zero.ma — Portfolio</h3>
-                            <p>Personal portfolio & blog documenting my Linux, networking, and IT infrastructure journey. Built from scratch with no frameworks.</p>
-                            <div class="project-tech"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>No Frameworks</span></div>
-                            <div class="project-stats"><div class="stat"><span class="stat-value">Live</span><span class="stat-label">zero.ma</span></div></div>
+                            <p>Personal portfolio & blog documenting my Linux, networking, and IT infrastructure journey. Built from scratch — no frameworks.</p>
+                            <div class="project-tech"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+                            <a href="https://github.com/0x9z" target="_blank" rel="noopener noreferrer" class="project-btn"><i class="fab fa-github"></i> View Project</a>
                         </div>
-                    </article>
-
-                    <article class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    </article></div>
+<div class="pag-card" data-index="1"><article class="project-card" data-aos="fade-up" data-aos-delay="150">
                         <div class="project-image">
                             <div class="project-overlay"><div class="project-links">
-                                <a href="https://github.com/0x9z/Cisco-CCNA-Labs" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="https://github.com/0x9z/snake-detector" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i></a>
                             </div></div>
-                            <div class="project-placeholder"><i class="fas fa-network-wired"></i></div>
-                        </div>
-                        <div class="project-content">
-                            <h3>BGP Multi-AS Chain</h3>
-                            <p>5-router eBGP chain across 5 autonomous systems (AS 100–500). Full end-to-end route propagation with 0% packet loss across all LANs.</p>
-                            <div class="project-tech"><span>BGP</span><span>eBGP</span><span>Cisco IOS</span><span>Packet Tracer</span></div>
-                            <div class="project-stats"><div class="stat"><span class="stat-value">5 AS</span><span class="stat-label">Multi-AS Design</span></div></div>
-                        </div>
-                    </article>
-
-                    <article class="project-card" data-aos="fade-up" data-aos-delay="300">
-                        <div class="project-image">
-                            <div class="project-overlay"><div class="project-links">
-                                <a href="https://github.com/0x9z/IPv4-subnet-calculator" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                            </div></div>
-                            <div class="project-placeholder"><i class="fas fa-calculator"></i></div>
-                        </div>
-                        <div class="project-content">
-                            <h3>IPv4 Subnet Calculator</h3>
-                            <p>High-precision, single-file IPv4 Subnet Calculator with a luxury dark theme. Built for network engineers — no dependencies.</p>
-                            <div class="project-tech"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>CIDR</span></div>
-                            <div class="project-stats"><div class="stat"><span class="stat-value">Single-file</span><span class="stat-label">No Dependencies</span></div></div>
-                        </div>
-                    </article>
-
-                    <article class="project-card" data-aos="fade-up" data-aos-delay="400">
-                        <div class="project-image">
-                            <div class="project-overlay"><div class="project-links">
-                                <a href="https://github.com/0x9z/snake-detector" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                            </div></div>
-                            <div class="project-placeholder"><i class="fas fa-eye"></i></div>
+                            <img src="https://raw.githubusercontent.com/0x9z/snake-detector/main/screenshot.png" alt="Snake Detector" class="project-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                            <div class="project-placeholder" style="display:none"><i class="fas fa-eye"></i></div>
                         </div>
                         <div class="project-content">
                             <h3>Snake Detector</h3>
                             <p>Track who doesn't follow you back on GitHub. 100% client-side — no login, no API key, no tracking.</p>
-                            <div class="project-tech"><span>JavaScript</span><span>GitHub API</span><span>Dark Mode</span><span>No Login</span></div>
-                            <div class="project-stats"><div class="stat"><span class="stat-value">100%</span><span class="stat-label">Client-side</span></div></div>
+                            <div class="project-tech"><span>JavaScript</span><span>GitHub API</span><span>Client-side</span></div>
+                            <a href="https://github.com/0x9z/snake-detector" target="_blank" rel="noopener noreferrer" class="project-btn"><i class="fab fa-github"></i> View Project</a>
                         </div>
-                    </article>
-
-                    <article class="project-card" data-aos="fade-up" data-aos-delay="500">
+                    </article></div>
+<div class="pag-card" data-index="2"><article class="project-card" data-aos="fade-up" data-aos-delay="200">
                         <div class="project-image">
                             <div class="project-overlay"><div class="project-links">
-                                <a href="https://github.com/0x9z/cv-builder" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="https://github.com/0x9z/cv-builder" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i></a>
                             </div></div>
-                            <div class="project-placeholder"><i class="fas fa-file-alt"></i></div>
+                            <img src="https://raw.githubusercontent.com/0x9z/cv-builder/main/topology.png" alt="CV Builder" class="project-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                            <div class="project-placeholder" style="display:none"><i class="fas fa-file-alt"></i></div>
                         </div>
                         <div class="project-content">
                             <h3>CV Builder</h3>
-                            <p>Smart CV builder with field-specific questions for IT, Nursing, HR, Driving & more. Export as clean PDF.</p>
+                            <p>Smart CV builder with field-specific questions for IT, Nursing, HR, Driving & more. Exports as a clean PDF.</p>
                             <div class="project-tech"><span>JavaScript</span><span>PDF Export</span><span>Vanilla JS</span></div>
-                            <div class="project-stats"><div class="stat"><span class="stat-value">Multi-field</span><span class="stat-label">Smart Builder</span></div></div>
+                            <a href="https://github.com/0x9z/cv-builder" target="_blank" rel="noopener noreferrer" class="project-btn"><i class="fab fa-github"></i> View Project</a>
                         </div>
-                    </article>
-
-                    <article class="project-card" data-aos="fade-up" data-aos-delay="600">
+                    </article></div>
+<div class="pag-card" data-index="3"><article class="project-card" data-aos="fade-up" data-aos-delay="250">
                         <div class="project-image">
                             <div class="project-overlay"><div class="project-links">
-                                <a href="https://github.com/0x9z/Automated-Backup-Script" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="https://github.com/0x9z/IPv4-subnet-calculator" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i></a>
                             </div></div>
-                            <div class="project-placeholder"><i class="fas fa-database"></i></div>
+                            <img src="https://raw.githubusercontent.com/0x9z/IPv4-subnet-calculator/main/topology.png" alt="IPv4 Subnet Calculator" class="project-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                            <div class="project-placeholder" style="display:none"><i class="fas fa-calculator"></i></div>
+                        </div>
+                        <div class="project-content">
+                            <h3>IPv4 Subnet Calculator</h3>
+                            <p>High-precision subnet calculator with a minimal dark theme. Built for network engineers — single file, no dependencies.</p>
+                            <div class="project-tech"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>CIDR</span></div>
+                            <a href="https://github.com/0x9z/IPv4-subnet-calculator" target="_blank" rel="noopener noreferrer" class="project-btn"><i class="fab fa-github"></i> View Project</a>
+                        </div>
+                    </article></div>
+<div class="pag-card" data-index="4"><article class="project-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="project-image">
+                            <div class="project-overlay"><div class="project-links">
+                                <a href="https://github.com/0x9z/system-monitor" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i></a>
+                            </div></div>
+                            <img src="https://raw.githubusercontent.com/0x9z/system-monitor/main/topology.png" alt="System Monitor" class="project-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                            <div class="project-placeholder" style="display:none"><i class="fas fa-tachometer-alt"></i></div>
+                        </div>
+                        <div class="project-content">
+                            <h3>System Monitor</h3>
+                            <p>Linux system monitoring tool for real-time resource tracking — CPU, memory, disk, and processes.</p>
+                            <div class="project-tech"><span>Bash</span><span>Linux</span><span>Shell</span></div>
+                            <a href="https://github.com/0x9z/system-monitor" target="_blank" rel="noopener noreferrer" class="project-btn"><i class="fab fa-github"></i> View Project</a>
+                        </div>
+                    </article></div>
+<div class="pag-card" data-index="5"><article class="project-card" data-aos="fade-up" data-aos-delay="350">
+                        <div class="project-image">
+                            <div class="project-overlay"><div class="project-links">
+                                <a href="https://github.com/0x9z/Automated-Backup-Script" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i></a>
+                            </div></div>
+                            <img src="https://raw.githubusercontent.com/0x9z/Automated-Backup-Script/main/topology.png" alt="Automated Backup" class="project-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                            <div class="project-placeholder" style="display:none"><i class="fas fa-database"></i></div>
                         </div>
                         <div class="project-content">
                             <h3>Automated Backup Script</h3>
                             <p>Bash script to schedule and manage automated backups on Linux systems. Lightweight and reliable.</p>
-                            <div class="project-tech"><span>Bash</span><span>Shell</span><span>Linux</span><span>Automation</span></div>
-                            <div class="project-stats"><div class="stat"><span class="stat-value">Linux</span><span class="stat-label">Automation</span></div></div>
+                            <div class="project-tech"><span>Bash</span><span>Linux</span><span>Automation</span></div>
+                            <a href="https://github.com/0x9z/Automated-Backup-Script" target="_blank" rel="noopener noreferrer" class="project-btn"><i class="fab fa-github"></i> View Project</a>
                         </div>
-                    </article>
-                </div>
-            </div>
-        </section>
+                    </article></div>
+<div class="pag-card" data-index="6"><article class="project-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="project-image">
+                            <div class="project-overlay"><div class="project-links">
+                                <a href="https://github.com/0x9z/Cisco-CCNA-Labs/tree/main/BGP%20Labs/BGP-Multi-AS-Chain" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i></a>
+                            </div></div>
+                            <img src="https://raw.githubusercontent.com/0x9z/Cisco-CCNA-Labs/main/BGP%20Labs/BGP-Multi-AS-Chain/topology.png" alt="BGP Multi-AS Chain" class="project-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                            <div class="project-placeholder" style="display:none"><i class="fas fa-network-wired"></i></div>
+                        </div>
+                        <div class="project-content">
+                            <h3>BGP Multi-AS Chain</h3>
+                            <p>5-router eBGP chain across 5 autonomous systems (AS 100–500). Full route propagation with 0% packet loss end-to-end.</p>
+                            <div class="project-tech"><span>BGP</span><span>eBGP</span><span>Cisco IOS</span><span>Packet Tracer</span></div>
+                            <a href="https://github.com/0x9z/Cisco-CCNA-Labs/tree/main/BGP%20Labs/BGP-Multi-AS-Chain" target="_blank" rel="noopener noreferrer" class="project-btn"><i class="fab fa-github"></i> View Project</a>
+                        </div>
+                    </article></div>
+<div class="pag-card" data-index="7"><article class="project-card" data-aos="fade-up" data-aos-delay="450">
+                        <div class="project-image">
+                            <div class="project-overlay"><div class="project-links">
+                                <a href="https://github.com/0x9z/Cisco-CCNA-Labs/tree/main/BGP%20Labs/BGP-Basic-Peering" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i></a>
+                            </div></div>
+                            <img src="https://raw.githubusercontent.com/0x9z/Cisco-CCNA-Labs/main/BGP%20Labs/BGP-Basic-Peering/topology.png" alt="BGP Basic Peering" class="project-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                            <div class="project-placeholder" style="display:none"><i class="fas fa-project-diagram"></i></div>
+                        </div>
+                        <div class="project-content">
+                            <h3>BGP Basic Peering</h3>
+                            <p>Foundational BGP peering lab — configuring neighbor relationships and verifying route advertisements between routers.</p>
+                            <div class="project-tech"><span>BGP</span><span>Cisco IOS</span><span>Packet Tracer</span></div>
+                            <a href="https://github.com/0x9z/Cisco-CCNA-Labs/tree/main/BGP%20Labs/BGP-Basic-Peering" target="_blank" rel="noopener noreferrer" class="project-btn"><i class="fab fa-github"></i> View Project</a>
+                        </div>
+                    </article></div>
+<div class="pag-card" data-index="8"><article class="project-card" data-aos="fade-up" data-aos-delay="500">
+                        <div class="project-image">
+                            <div class="project-overlay"><div class="project-links">
+                                <a href="https://github.com/0x9z/Cisco-CCNA-Labs/tree/main/DHCP-Labs/DHCP-Hub-Spoke-EIGRP" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i></a>
+                            </div></div>
+                            <img src="https://raw.githubusercontent.com/0x9z/Cisco-CCNA-Labs/main/DHCP-Labs/DHCP-Hub-Spoke-EIGRP/topology.png" alt="DHCP Hub-Spoke EIGRP" class="project-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                            <div class="project-placeholder" style="display:none"><i class="fas fa-server"></i></div>
+                        </div>
+                        <div class="project-content">
+                            <h3>DHCP Hub-Spoke + EIGRP</h3>
+                            <p>Hub-and-spoke topology with centralized DHCP server and EIGRP dynamic routing across multiple branch sites.</p>
+                            <div class="project-tech"><span>DHCP</span><span>EIGRP</span><span>Cisco IOS</span></div>
+                            <a href="https://github.com/0x9z/Cisco-CCNA-Labs/tree/main/DHCP-Labs/DHCP-Hub-Spoke-EIGRP" target="_blank" rel="noopener noreferrer" class="project-btn"><i class="fab fa-github"></i> View Project</a>
+                        </div>
+                    </article></div>
+<div class="pag-card" data-index="9"><article class="project-card" data-aos="fade-up" data-aos-delay="550">
+                        <div class="project-image">
+                            <div class="project-overlay"><div class="project-links">
+                                <a href="https://github.com/0x9z/Cisco-CCNA-Labs/tree/main/DHCP-Labs/DHCP-Multi-LAN-Enterprise-Network" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i></a>
+                            </div></div>
+                            <img src="https://raw.githubusercontent.com/0x9z/Cisco-CCNA-Labs/main/DHCP-Labs/DHCP-Multi-LAN-Enterprise-Network/topology.png" alt="DHCP Enterprise" class="project-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                            <div class="project-placeholder" style="display:none"><i class="fas fa-building"></i></div>
+                        </div>
+                        <div class="project-content">
+                            <h3>DHCP Multi-LAN Enterprise</h3>
+                            <p>Enterprise-scale multi-LAN network with centralized DHCP pools serving multiple segments across the topology.</p>
+                            <div class="project-tech"><span>DHCP</span><span>Enterprise</span><span>Cisco IOS</span></div>
+                            <a href="https://github.com/0x9z/Cisco-CCNA-Labs/tree/main/DHCP-Labs/DHCP-Multi-LAN-Enterprise-Network" target="_blank" rel="noopener noreferrer" class="project-btn"><i class="fab fa-github"></i> View Project</a>
+                        </div>
+                    </article></div>
+<div class="pag-card" data-index="10"><article class="project-card" data-aos="fade-up" data-aos-delay="600">
+                        <div class="project-image">
+                            <div class="project-overlay"><div class="project-links">
+                                <a href="https://github.com/0x9z/Cisco-CCNA-Labs/tree/main/EIGRP-Labs/EIGRP-Multi-Router-FTP-NTP" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i></a>
+                            </div></div>
+                            <img src="https://raw.githubusercontent.com/0x9z/Cisco-CCNA-Labs/main/EIGRP-Labs/EIGRP-Multi-Router-FTP-NTP/Topology.png" alt="EIGRP FTP NTP" class="project-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                            <div class="project-placeholder" style="display:none"><i class="fas fa-exchange-alt"></i></div>
+                        </div>
+                        <div class="project-content">
+                            <h3>EIGRP + FTP & NTP</h3>
+                            <p>Multi-router EIGRP network integrated with FTP and NTP services — simulating a real enterprise environment.</p>
+                            <div class="project-tech"><span>EIGRP</span><span>FTP</span><span>NTP</span><span>Cisco IOS</span></div>
+                            <a href="https://github.com/0x9z/Cisco-CCNA-Labs/tree/main/EIGRP-Labs/EIGRP-Multi-Router-FTP-NTP" target="_blank" rel="noopener noreferrer" class="project-btn"><i class="fab fa-github"></i> View Project</a>
+                        </div>
+                    </article></div>
+<div class="pag-card" data-index="11"><article class="project-card" data-aos="fade-up" data-aos-delay="650">
+                        <div class="project-image">
+                            <div class="project-overlay"><div class="project-links">
+                                <a href="https://github.com/0x9z/Cisco-CCNA-Labs/tree/main/EIGRP-Labs/EIGRP-Multi-Site-Redundant" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i></a>
+                            </div></div>
+                            <img src="https://raw.githubusercontent.com/0x9z/Cisco-CCNA-Labs/main/EIGRP-Labs/EIGRP-Multi-Site-Redundant/topology.png" alt="EIGRP Redundant" class="project-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                            <div class="project-placeholder" style="display:none"><i class="fas fa-sync-alt"></i></div>
+                        </div>
+                        <div class="project-content">
+                            <h3>EIGRP Multi-Site Redundant</h3>
+                            <p>Redundant multi-site EIGRP topology with failover paths — ensuring high availability across all sites.</p>
+                            <div class="project-tech"><span>EIGRP</span><span>Redundancy</span><span>Cisco IOS</span></div>
+                            <a href="https://github.com/0x9z/Cisco-CCNA-Labs/tree/main/EIGRP-Labs/EIGRP-Multi-Site-Redundant" target="_blank" rel="noopener noreferrer" class="project-btn"><i class="fab fa-github"></i> View Project</a>
+                        </div>
+                    </article></div>
+<div class="pag-card" data-index="12"><article class="project-card" data-aos="fade-up" data-aos-delay="700">
+                        <div class="project-image">
+                            <div class="project-overlay"><div class="project-links">
+                                <a href="https://github.com/0x9z/Cisco-CCNA-Labs/tree/main/EIGRP-Labs/Multi-Site-EIGRP-Network-with-Wireless-DHCP-Relay" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i></a>
+                            </div></div>
+                            <img src="https://raw.githubusercontent.com/0x9z/Cisco-CCNA-Labs/main/EIGRP-Labs/Multi-Site-EIGRP-Network-with-Wireless-DHCP-Relay/topology.png" alt="EIGRP Wireless" class="project-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                            <div class="project-placeholder" style="display:none"><i class="fas fa-wifi"></i></div>
+                        </div>
+                        <div class="project-content">
+                            <h3>EIGRP + Wireless + DHCP Relay</h3>
+                            <p>Multi-site EIGRP network with wireless access points and DHCP relay agents — 12 routers, full wireless coverage.</p>
+                            <div class="project-tech"><span>EIGRP</span><span>Wireless</span><span>DHCP Relay</span></div>
+                            <a href="https://github.com/0x9z/Cisco-CCNA-Labs/tree/main/EIGRP-Labs/Multi-Site-EIGRP-Network-with-Wireless-DHCP-Relay" target="_blank" rel="noopener noreferrer" class="project-btn"><i class="fab fa-github"></i> View Project</a>
+                        </div>
+                    </article></div>
+<div class="pag-card" data-index="13"><article class="project-card" data-aos="fade-up" data-aos-delay="750">
+                        <div class="project-image">
+                            <div class="project-overlay"><div class="project-links">
+                                <a href="https://github.com/0x9z/Cisco-CCNA-Labs/tree/main/RIPv2-Labs/RIPv2-Multi-Site-Enterprise" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i></a>
+                            </div></div>
+                            <img src="https://raw.githubusercontent.com/0x9z/Cisco-CCNA-Labs/main/RIPv2-Labs/RIPv2-Multi-Site-Enterprise/topology.png" alt="RIPv2 Enterprise" class="project-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                            <div class="project-placeholder" style="display:none"><i class="fas fa-sitemap"></i></div>
+                        </div>
+                        <div class="project-content">
+                            <h3>RIPv2 Multi-Site Enterprise</h3>
+                            <p>Enterprise-scale RIPv2 network spanning multiple sites — full dynamic routing with summarization and authentication.</p>
+                            <div class="project-tech"><span>RIPv2</span><span>Enterprise</span><span>Cisco IOS</span></div>
+                            <a href="https://github.com/0x9z/Cisco-CCNA-Labs/tree/main/RIPv2-Labs/RIPv2-Multi-Site-Enterprise" target="_blank" rel="noopener noreferrer" class="project-btn"><i class="fab fa-github"></i> View Project</a>
+                        </div>
+                    </article></div>
+<div class="pag-card" data-index="14"><article class="project-card" data-aos="fade-up" data-aos-delay="800">
+                        <div class="project-image">
+                            <div class="project-overlay"><div class="project-links">
+                                <a href="https://github.com/0x9z/Cisco-CCNA-Labs/tree/main/RIPv2-Labs/RIPv2-Multi-Site-Redundant" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i></a>
+                            </div></div>
+                            <img src="https://raw.githubusercontent.com/0x9z/Cisco-CCNA-Labs/main/RIPv2-Labs/RIPv2-Multi-Site-Redundant/topology.png" alt="RIPv2 Redundant" class="project-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                            <div class="project-placeholder" style="display:none"><i class="fas fa-random"></i></div>
+                        </div>
+                        <div class="project-content">
+                            <h3>RIPv2 Multi-Site Redundant</h3>
+                            <p>Redundant RIPv2 topology with multiple failover paths — tested and verified with full connectivity across all nodes.</p>
+                            <div class="project-tech"><span>RIPv2</span><span>Redundancy</span><span>Cisco IOS</span></div>
+                            <a href="https://github.com/0x9z/Cisco-CCNA-Labs/tree/main/RIPv2-Labs/RIPv2-Multi-Site-Redundant" target="_blank" rel="noopener noreferrer" class="project-btn"><i class="fab fa-github"></i> View Project</a>
+                        </div>
+                    </article></div>
+<div class="pag-card" data-index="15"><article class="project-card" data-aos="fade-up" data-aos-delay="850">
+                        <div class="project-image">
+                            <div class="project-overlay"><div class="project-links">
+                                <a href="https://github.com/0x9z/Cisco-CCNA-Labs/tree/main/VLSM%20Labs/VLSM-Lab1" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i></a>
+                            </div></div>
+                            <img src="https://raw.githubusercontent.com/0x9z/Cisco-CCNA-Labs/main/VLSM%20Labs/VLSM-Lab1/topology.png" alt="VLSM Lab" class="project-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                            <div class="project-placeholder" style="display:none"><i class="fas fa-th"></i></div>
+                        </div>
+                        <div class="project-content">
+                            <h3>VLSM Lab</h3>
+                            <p>Variable Length Subnet Masking lab — efficient IP allocation across multiple subnets of different sizes.</p>
+                            <div class="project-tech"><span>VLSM</span><span>Subnetting</span><span>IP Design</span></div>
+                            <a href="https://github.com/0x9z/Cisco-CCNA-Labs/tree/main/VLSM%20Labs/VLSM-Lab1" target="_blank" rel="noopener noreferrer" class="project-btn"><i class="fab fa-github"></i> View Project</a>
+                        </div>
+                    </article></div>
+<div class="pag-card" data-index="16"><article class="project-card" data-aos="fade-up" data-aos-delay="900">
+                        <div class="project-image">
+                            <div class="project-overlay"><div class="project-links">
+                                <a href="https://github.com/0x9z/Cisco-CCNA-Labs/tree/main/Static%20Routing%20Labs/Static%20Routing%20Lab1" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i></a>
+                            </div></div>
+                            <img src="https://raw.githubusercontent.com/0x9z/Cisco-CCNA-Labs/main/Static%20Routing%20Labs/Static%20Routing%20Lab1/topology.png" alt="Static Routing" class="project-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                            <div class="project-placeholder" style="display:none"><i class="fas fa-route"></i></div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Static Routing Lab</h3>
+                            <p>Foundational static routing configuration — defining explicit paths between networks and verifying full connectivity.</p>
+                            <div class="project-tech"><span>Static Routing</span><span>Cisco IOS</span><span>Packet Tracer</span></div>
+                            <a href="https://github.com/0x9z/Cisco-CCNA-Labs/tree/main/Static%20Routing%20Labs/Static%20Routing%20Lab1" target="_blank" rel="noopener noreferrer" class="project-btn"><i class="fab fa-github"></i> View Project</a>
+                        </div>
+                    </article></div>
 
-        <!-- Experience Section -->
-        <section id="experience" class="experience">
-            <div class="container">
-                <div class="section-header" data-aos="fade-up">
-                    <span class="section-tag">Career Journey</span>
-                    <h2 class="section-title">Professional Experience</h2>
-                    <p class="section-subtitle">
-                        Self-taught journey through Linux, networking, and infrastructure
-                    </p>
-                </div>
-                
-                <div class="experience-track" role="list" aria-label="Professional experience">
-                    <article class="xp-card" role="listitem" data-aos="fade-up" data-aos-delay="50">
-                        <span class="xp-card__dot" aria-hidden="true"></span>
-                        <button class="xp-card__header" type="button" id="xp-toggle-homelab" aria-expanded="false" aria-controls="xp-panel-homelab">
-                            <span class="xp-card__logo" aria-hidden="true">
-                                <i class="fas fa-home"></i>
-                            </span>
-                            <span class="xp-card__company">Self-Taught & Homelab</span>
-                            <span class="xp-card__title">Networking</span>
-                            <span class="xp-card__date">Mar 2026 – Present</span>
-                        </button>
-		    <article class="xp-card" role="listitem" data-aos="fade-up" data-aos-delay="50">
-		        <span class="xp-card__dot" aria-hidden="true"></span>
-                        <button class="xp-card__header" type="button" id="xp-toggle-homelab" aria-expanded="false" aria-controls="xp-panel-homelab">
-                            <span class="xp-card__logo" aria-hidden="true">
-                                <i class="fas fa-home"></i>
-                            </span>
-                            <span class="xp-card__company">Self-Taught & Homelab</span>
-                            <span class="xp-card__title">Linux & Network Security</span>
-                            <span class="xp-card__date">Nov 2025 – Dec 2025</span>
-                        </button>
-                        <div class="xp-card__panel" id="xp-panel-homelab" role="region" aria-labelledby="xp-toggle-homelab" aria-hidden="true">
-                            <p class="xp-card__summary">Self-directed professional development in Linux, networking, and IT infrastructure — building in public, one command at a time.</p>
-                            <ul class="xp-card__bullets">
-                                <li>Processed and organized invoices for accounting records</li>
-                                <li>Assisted with CNSS employee data entry</li>
-                                <li>Supported tax authority filings and external payment processing</li>
-                            </ul>
-                            <div class="xp-card__skills" aria-label="Skills and tools">
-                                <div class="xp-skill-group">
-                                    <h3 class="xp-skill-group__title">Core Skills</h3>
-                                    <ul class="xp-skill-group__list">
-                                        <li>Linux Administration</li>
-                                        <li>Shell Scripting</li>
-                                        <li>Networking</li>
-                                    </ul>
-                                </div>
-                                <div class="xp-skill-group">
-                                    <h3 class="xp-skill-group__title">Tools</h3>
-                                    <ul class="xp-skill-group__list">
-                                        <li>Fedora</li>
-                                        <li>Docker</li>
-                                        <li>Git</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
+  </div>
+  <div class="pagination-controls">
+    <button class="pag-btn" id="pag-prev" onclick="pagChange(-1)" disabled>&#8592; Prev</button>
+    <span class="pag-info" id="pag-info">1 / 3</span>
+    <button class="pag-btn" id="pag-next" onclick="pagChange(1)">Next &#8594;</button>
+  </div>
+</div>
+<script>
+(function(){
+  var PER_PAGE = 6;
+  var TOTAL = 17;
+  var currentPage = 0;
+  var totalPages = Math.ceil(TOTAL / PER_PAGE);
 
-                    <article class="xp-card" role="listitem" data-aos="fade-up" data-aos-delay="100">
-                        <span class="xp-card__dot" aria-hidden="true"></span>
-                        <button class="xp-card__header" type="button" id="xp-toggle-content" aria-expanded="false" aria-controls="xp-panel-content">
-                            <span class="xp-card__logo" aria-hidden="true">
-                                <i class="fas fa-pen"></i>
-                            </span>
-                            <span class="xp-card__company">Ecole ijas de gestion, commerce & informatique</span>
-                            <span class="xp-card__title">Diploma — Gestion Informatisée</span>
-                            <span class="xp-card__date">Sep 2023 – Jun 2025</span>
-                        </button>
-                        <div class="xp-card__panel" id="xp-panel-content" role="region" aria-labelledby="xp-toggle-content" aria-hidden="true">
-                            <p class="xp-card__summary">Diplôme Technicien in Gestion Informatisée — covering Microsoft Office, data management, and IT fundamentals.</p>
-                            <ul class="xp-card__bullets">
-                                <li>Completed Diplôme Technicien in Gestion Informatisée</li>
-                                <li>Covered Microsoft Office, Excel, data processing and IT basics</li>
-                                <li>Parallel self-study in Linux and networking throughout the program</li>
-                            </ul>
-                            <div class="xp-card__skills" aria-label="Skills and tools">
-                                <div class="xp-skill-group">
-                                    <h3 class="xp-skill-group__title">Core Skills</h3>
-                                    <ul class="xp-skill-group__list">
-                                        <li>Technical Writing</li>
-                                        <li>Open Source</li>
-                                    </ul>
-                                </div>
-                                <div class="xp-skill-group">
-                                    <h3 class="xp-skill-group__title">Platforms</h3>
-                                    <ul class="xp-skill-group__list">
-                                        <li>GitHub</li>
-                                        <li>LinkedIn</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                </div>
+  function render() {
+    var start = currentPage * PER_PAGE;
+    var end = Math.min(start + PER_PAGE, TOTAL);
+    var cards = document.querySelectorAll('.pag-card');
+    cards.forEach(function(c, i) {
+      c.style.display = (i >= start && i < end) ? '' : 'none';
+    });
+    document.getElementById('pag-prev').disabled = currentPage === 0;
+    document.getElementById('pag-next').disabled = currentPage >= totalPages - 1;
+    document.getElementById('pag-info').textContent = (currentPage + 1) + ' / ' + totalPages;
+    // show correct category label
+    document.getElementById('pag-label-tools').style.display = (currentPage === 0) ? '' : 'none';
+    document.getElementById('pag-label-cisco').style.display = (currentPage > 0) ? '' : 'none';
+  }
+
+  window.pagChange = function(dir) {
+    currentPage = Math.max(0, Math.min(totalPages - 1, currentPage + dir));
+    render();
+    document.getElementById('projects-grid').scrollIntoView({behavior:'smooth', block:'start'});
+  };
+
+  render();
+})();
+</script>
+
+
             </div>
         </section>
 
         
 
+        
+
+        
+        
+        <!-- Blog Section -->
+        <section id="blog" class="blog-section">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="section-title">Writing</h2>
+                </div>
+                <div class="blog-grid" data-aos="fade-up" data-aos-delay="100">
+                    
+                    <a href="https://medium.com/@0x9z/the-protocol-that-every-network-engineer-need-to-know-19d2dad996d0" target="_blank" rel="noopener noreferrer" class="blog-card">
+                        <div class="blog-card__img-wrap">
+                            <img src="https://miro.medium.com/v2/resize:fit:750/format:webp/1*0II8Wg7At1EjnTD9VwBO9Q.png" alt="I watched a packet get lost in my home network, and it changed how I think about the Internet" class="blog-card__img" onerror="this.parentElement.style.background='#1a1a1a'">
+                            <div class="blog-card__overlay"></div>
+                        </div>
+                        <div class="blog-card__body">
+                            <span class="blog-card__date">Jul 1</span>
+                            <h3 class="blog-card__title">The Protocol That Every Network Engineer Need To know</h3>
+                            <span class="blog-card__read">Read ↗</span>
+                        </div>
+                    </a>
+                    <a href="https://medium.com/@0x9z/subnetting-made-easy-a-step-by-step-guide-by-zero-84bb4224153e" target="_blank" rel="noopener noreferrer" class="blog-card">
+                        <div class="blog-card__img-wrap">
+                            <img src="https://miro.medium.com/v2/resize:fit:750/format:webp/1*KXdKlYfUZTjruT-05XFl9w.png" alt="Subnetting Made Easy: A Step-by-Step Guide" class="blog-card__img" onerror="this.parentElement.style.background='#1a1a1a'">
+                            <div class="blog-card__overlay"></div>
+                        </div>
+                        <div class="blog-card__body">
+                            <span class="blog-card__date">Jun 14</span>
+                            <h3 class="blog-card__title">Mastering Cisco IOS Command Modes</h3>
+                            <span class="blog-card__read">Read ↗</span>
+                        </div>
+                    </a>
+                    <a href="https://medium.com/@0x9z/i-killed-firefox-from-the-terminal-and-it-changed-how-i-think-about-linux-24a5fbbdfca7" target="_blank" rel="noopener noreferrer" class="blog-card">
+                        <div class="blog-card__img-wrap">
+                            <img src="https://miro.medium.com/v2/resize:fit:750/format:webp/1*udUzwTFbJXC65xcrqMNOjw.png" alt="I Learned the Secret Names of Data — And Finally Understood PDUs" class="blog-card__img" onerror="this.parentElement.style.background='#1a1a1a'">
+                            <div class="blog-card__overlay"></div>
+                        </div>
+                        <div class="blog-card__body">
+                            <span class="blog-card__date">Jun 2</span>
+                            <h3 class="blog-card__title">I Killed Firefox From the Terminal — And It Changed How I Think About Linux</h3>
+                            <span class="blog-card__read">Read ↗</span>
+                        </div>
+                    </a>
+                    <a href="https://medium.com/@0x9z/the-cut-command-a-linux-beginners-complete-guide-to-extracting-data-like-a-pro-fffaeba39b8a" target="_blank" rel="noopener noreferrer" class="blog-card">
+                        <div class="blog-card__img-wrap">
+                            <img src="https://miro.medium.com/v2/resize:fit:750/format:webp/1*Vn-JIPoXNmhiIB7kN3BVgQ.png" alt="I Watched a Message Get Wrapped and Unwrapped — And Finally Understood Encapsulation" class="blog-card__img" onerror="this.parentElement.style.background='#1a1a1a'">
+                            <div class="blog-card__overlay"></div>
+                        </div>
+                        <div class="blog-card__body">
+                            <span class="blog-card__date">Jun 1</span>
+                            <h3 class="blog-card__title">The cut Command: A Linux Beginner's Complete Guide to Extracting Data Like a Pro</h3>
+                            <span class="blog-card__read">Read ↗</span>
+                        </div>
+                    </a>
+                    <a href="https://medium.com/@0x9z/tcp-ip-suite-the-internets-actual-language-036a55114b66" target="_blank" rel="noopener noreferrer" class="blog-card">
+                        <div class="blog-card__img-wrap">
+                            <img src="https://miro.medium.com/v2/resize:fill:320:214/1*KgVYo03Eh9cy4-ybHMVjJA.jpeg" alt="TCP/IP Suite — The Internet's Actual Language" class="blog-card__img" onerror="this.parentElement.style.background='#1a1a1a'">
+                            <div class="blog-card__overlay"></div>
+                        </div>
+                        <div class="blog-card__body">
+                            <span class="blog-card__date">May 26</span>
+                            <h3 class="blog-card__title">TCP/IP Suite — The Internet's Actual Language</h3>
+                            <span class="blog-card__read">Read ↗</span>
+                        </div>
+                    </a>
+                    <a href="https://medium.com/@0x9z/i-built-a-network-in-packet-tracer-and-finally-understood-the-osi-model-d26146125b4a" target="_blank" rel="noopener noreferrer" class="blog-card">
+                        <div class="blog-card__img-wrap">
+                            <img src="https://miro.medium.com/v2/resize:fill:320:214/1*tFzYn2lW9siibuqOwRNh7Q.jpeg" alt="I Built a Network in Packet Tracer — And Finally Understood the OSI Model" class="blog-card__img" onerror="this.parentElement.style.background='#1a1a1a'">
+                            <div class="blog-card__overlay"></div>
+                        </div>
+                        <div class="blog-card__body">
+                            <span class="blog-card__date">May 25</span>
+                            <h3 class="blog-card__title">I Built a Network in Packet Tracer — And Finally Understood the OSI Model</h3>
+                            <span class="blog-card__read">Read ↗</span>
+                        </div>
+                    </a>
+                </div>
+
+
+		<div class="blog-cta" data-aos="fade-up" data-aos-delay="200">
+	 	   <a href="https://blog.zero.ma" target="_blank" rel="noopener noreferrer" class="blog-cta-btn"
+	 	      style="border: 2px solid #000; border-radius: 8px; padding: 12px 28px; display: inline-block; text-decoration: none;">
+	 	       Read All My Articles ↗
+ 	 	  </a>
+		</div>
+
+
+            </div>
+        </section>
+
+
         <!-- Contact Section -->
         <section id="contact" class="contact">
             <div class="container">
                 <div class="section-header" data-aos="fade-up">
-                    <span class="section-tag">Get In Touch</span>
-                    <h2 class="section-title">Let's Connect</h2>
+                    <h2 class="section-title">Contact</h2>
                 </div>
                 
                 <div class="contact-content" data-aos="fade-up" data-aos-delay="100">
                     <div class="contact-cta">
-                        <h3>Ready to collaborate?</h3>
+                        <h3>Get in touch.</h3>
                         <p>Whether you're interested in Linux, networking, or open-source projects, I'd love to connect.</p>
                         <div class="cta-buttons">
-                            <a href="mailto:contact@zero.ma" class="btn btn-primary">
+                            <a href="###" class="btn btn-primary">
                                 <i class="fas fa-envelope" aria-hidden="true"></i>
                                 Email Me
                             </a>
@@ -1984,7 +2515,7 @@ section {
                                 <i class="fab fa-github"></i>
                                 <span>GitHub</span>
                             </a>
-                            <a href="https://linkedin.com/in/0x9z" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+                            <a href="https://linkedin.com/in/anasaitbaani" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
                                 <i class="fab fa-linkedin"></i>
                                 <span>LinkedIn</span>
                             </a>
@@ -1996,7 +2527,7 @@ section {
                                 <i class="fab fa-dev"></i>
                                 <span>Dev.to</span>
                             </a>
-                            <a href="https://x.com/_0x9z" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Twitter">
+                            <a href="https://x.com/_0x9z" aria-label="X / Twitter" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Twitter">
                                 <i class="fab fa-twitter"></i>
                                 <span>Twitter</span>
                             </a>
@@ -2021,14 +2552,14 @@ section {
                 </div>
                 <p style="font-size:13px;color:var(--gray-400);margin-bottom:4px;">Anas Ait Baani</p>
                 <p class="footer-text">
-                    I learn by doing — one command at a time.
+                    Building IT infrastructure from the ground up.
                 </p>
                 <nav class="footer-links" aria-label="Footer navigation">
                     <a href="#home">Home</a>
                     <a href="#about">About</a>
-                    <a href="#skills">Skills</a>
+                    
                     <a href="#projects">Projects</a>
-                    <a href="#experience">Experience</a>
+                    
                     
                     <a href="#contact">Contact</a>
 		    <a href="https://blog.zero.ma">Blog</a>
