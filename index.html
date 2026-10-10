@@ -939,6 +939,283 @@ section {
     transition: width 1s ease;
 }
 
+
+/* ============================================= */
+/* TEMPLATES SECTION */
+/* ============================================= */
+.templates-section {
+    padding: 100px 0;
+    background: var(--white);
+    border-top: 1px solid var(--gray-200);
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.templates-layout {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+/* Tabs */
+.templates-tabs {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.template-tab {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 24px;
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    text-align: left;
+    transition: var(--transition);
+    font-family: inherit;
+    color: var(--gray-500);
+}
+
+.template-tab:hover {
+    border-color: var(--black);
+    color: var(--black);
+    transform: translateX(5px);
+}
+
+.template-tab.active {
+    background: var(--black);
+    border-color: var(--black);
+    color: var(--white);
+}
+
+.tab-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    opacity: 0.5;
+    flex-shrink: 0;
+}
+
+.template-tab.active .tab-num {
+    opacity: 0.8;
+}
+
+.tab-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.tab-name {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+}
+
+.tab-desc {
+    font-size: 12px;
+    opacity: 0.6;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+/* Content / Panel */
+.templates-content {
+    border: 1px solid var(--gray-200);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    background: var(--white);
+    min-height: 500px;
+}
+
+.template-panel {
+    display: none;
+}
+
+.template-panel.active {
+    display: block;
+    animation: templateFadeIn 0.4s ease;
+}
+
+@keyframes templateFadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.panel-visual {
+    position: relative;
+    width: 100%;
+    height: 340px;
+    background: var(--gray-100);
+    overflow: hidden;
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.panel-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.template-panel:hover .panel-visual img {
+    transform: scale(1.03);
+}
+
+.panel-visual.no-img::after {
+    content: 'Preview not available';
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gray-400);
+    font-size: 14px;
+}
+
+.panel-info {
+    padding: 32px;
+}
+
+.panel-meta-top {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.panel-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--black);
+    opacity: 0.5;
+}
+
+.panel-tag {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--black);
+    background: var(--gray-100);
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+
+.panel-info h3 {
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--black);
+    margin-bottom: 12px;
+    letter-spacing: -0.02em;
+}
+
+.panel-info p {
+    font-size: 15px;
+    color: var(--gray-500);
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.panel-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.panel-features span {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--gray-500);
+    background: var(--gray-100);
+    padding: 5px 12px;
+    border-radius: 6px;
+}
+
+.panel-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 28px;
+    background: var(--black);
+    color: var(--white);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    border-radius: 8px;
+    border: 2px solid var(--black);
+    transition: var(--transition);
+}
+
+.panel-btn:hover {
+    background: var(--white);
+    color: var(--black);
+    transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .templates-layout {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .templates-tabs {
+        flex-direction: row;
+        overflow-x: auto;
+        gap: 10px;
+        padding-bottom: 8px;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .template-tab {
+        min-width: 220px;
+        flex-shrink: 0;
+        padding: 16px 20px;
+    }
+
+    .panel-visual {
+        height: 240px;
+    }
+
+    .panel-info {
+        padding: 24px;
+    }
+
+    .panel-info h3 {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+    .templates-section {
+        padding: 60px 0;
+    }
+
+    .template-tab {
+        min-width: 180px;
+    }
+
+    .panel-visual {
+        height: 200px;
+    }
+
+    .panel-info {
+        padding: 20px;
+    }
+}
+
+
+
 /* Projects Section */
 .projects-grid { grid-template-columns: repeat(3, 1fr) !important; /* 3x2 pagination */ /* orig: */
     display: grid;
@@ -1814,6 +2091,7 @@ section {
             <div class="nav-menu" id="nav-menu">
                 <a href="#home" class="nav-link active">Home</a>
                 <a href="#about" class="nav-link">About</a>
+                <a href="#templates" class="nav-link">Templates</a>
                 
                 <a href="#projects" class="nav-link">Projects</a>
                 <a href="#blog" class="nav-link">Writing</a>
@@ -2068,7 +2346,186 @@ section {
 </section>
 	
 	
-	
+	<!-- ============================================= -->
+<!-- TEMPLATES SECTION — Landing Page Collection -->
+<!-- ============================================= -->
+
+<section id="templates" class="templates-section">
+    <div class="container">
+
+        <div class="section-header" data-aos="fade-up">
+            <span class="section-tag">Templates</span>
+            <h2 class="section-title">Landing Page Collection</h2>
+            <p class="section-subtitle">
+                Four responsive landing page templates built with HTML, CSS, and vanilla JavaScript.
+                Design experiments with AI assistance — no frameworks, single-file.
+            </p>
+        </div>
+
+        <div class="templates-layout" data-aos="fade-up" data-aos-delay="100">
+
+            <!-- Tab Navigation -->
+            <div class="templates-tabs">
+                <button class="template-tab active" onclick="openTemplate(event, 'aethermedia')">
+                    <span class="tab-num">01</span>
+                    <span class="tab-info">
+                        <span class="tab-name">AetherMedia</span>
+                        <span class="tab-desc">SMMA Agency</span>
+                    </span>
+                </button>
+                <button class="template-tab" onclick="openTemplate(event, 'studio-elevate')">
+                    <span class="tab-num">02</span>
+                    <span class="tab-info">
+                        <span class="tab-name">Studio Elevate</span>
+                        <span class="tab-desc">Performance Marketing</span>
+                    </span>
+                </button>
+                <button class="template-tab" onclick="openTemplate(event, 'neuralops')">
+                    <span class="tab-num">03</span>
+                    <span class="tab-info">
+                        <span class="tab-name">NeuralOps</span>
+                        <span class="tab-desc">AI Automation</span>
+                    </span>
+                </button>
+                <button class="template-tab" onclick="openTemplate(event, 'growthlab')">
+                    <span class="tab-num">04</span>
+                    <span class="tab-info">
+                        <span class="tab-name">GrowthLab</span>
+                        <span class="tab-desc">Landing Pages</span>
+                    </span>
+                </button>
+            </div>
+
+            <!-- Tab Panels -->
+            <div class="templates-content">
+
+                <!-- 01 — AetherMedia -->
+                <div id="aethermedia" class="template-panel active">
+                    <div class="panel-visual">
+                        <img
+                            src="https://raw.githubusercontent.com/0x9z/landing-pages/main/aethermedia/screenshot.png"
+                            alt="AetherMedia Preview"
+                            loading="lazy"
+                            onerror="this.style.display='none'; this.parentElement.classList.add('no-img');">
+                    </div>
+                    <div class="panel-info">
+                        <div class="panel-meta-top">
+                            <span class="panel-num">01</span>
+                            <span class="panel-tag">SMMA Agency</span>
+                        </div>
+                        <h3>AetherMedia</h3>
+                        <p>
+                            Dark-themed SMMA agency landing page with interactive service tabs,
+                            case studies, testimonials, and a lead capture form.
+                        </p>
+                        <div class="panel-features">
+                            <span>Interactive Tabs</span>
+                            <span>Case Studies</span>
+                            <span>Dark Cyan</span>
+                        </div>
+                        <a href="https://0x9z.github.io/landing-pages/aethermedia/" target="_blank" rel="noopener noreferrer" class="panel-btn">
+                            View Live Demo →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 02 — Studio Elevate -->
+                <div id="studio-elevate" class="template-panel">
+                    <div class="panel-visual">
+                        <img
+                            src="https://raw.githubusercontent.com/0x9z/landing-pages/main/studio-elevate/screenshot.png"
+                            alt="Studio Elevate Preview"
+                            loading="lazy"
+                            onerror="this.style.display='none'; this.parentElement.classList.add('no-img');">
+                    </div>
+                    <div class="panel-info">
+                        <div class="panel-meta-top">
+                            <span class="panel-num">02</span>
+                            <span class="panel-tag">Performance Marketing</span>
+                        </div>
+                        <h3>Studio Elevate</h3>
+                        <p>
+                            Cyberpunk-inspired performance marketing page with custom cursor,
+                            animated grid background, floating ad cards, and neon-green accents.
+                        </p>
+                        <div class="panel-features">
+                            <span>Custom Cursor</span>
+                            <span>Animated Grid</span>
+                            <span>Neon Green</span>
+                        </div>
+                        <a href="https://0x9z.github.io/landing-pages/studio-elevate/" target="_blank" rel="noopener noreferrer" class="panel-btn">
+                            View Live Demo →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 03 — NeuralOps -->
+                <div id="neuralops" class="template-panel">
+                    <div class="panel-visual">
+                        <img
+                            src="https://raw.githubusercontent.com/0x9z/landing-pages/main/neuralops/screenshot.png"
+                            alt="NeuralOps Preview"
+                            loading="lazy"
+                            onerror="this.style.display='none'; this.parentElement.classList.add('no-img');">
+                    </div>
+                    <div class="panel-info">
+                        <div class="panel-meta-top">
+                            <span class="panel-num">03</span>
+                            <span class="panel-tag">AI Automation</span>
+                        </div>
+                        <h3>NeuralOps</h3>
+                        <p>
+                            AI automation agency page with pain-point cards, offer box with pricing,
+                            ROI calculator section, and urgency badge for conversion.
+                        </p>
+                        <div class="panel-features">
+                            <span>Pain → Solution</span>
+                            <span>ROI Calculator</span>
+                            <span>Purple Cyan</span>
+                        </div>
+                        <a href="https://0x9z.github.io/landing-pages/neuralops/" target="_blank" rel="noopener noreferrer" class="panel-btn">
+                            View Live Demo →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 04 — GrowthLab -->
+                <div id="growthlab" class="template-panel">
+                    <div class="panel-visual">
+                        <img
+                            src="https://raw.githubusercontent.com/0x9z/landing-pages/main/growthlab/screenshot.png"
+                            alt="GrowthLab Preview"
+                            loading="lazy"
+                            onerror="this.style.display='none'; this.parentElement.classList.add('no-img');">
+                    </div>
+                    <div class="panel-info">
+                        <div class="panel-meta-top">
+                            <span class="panel-num">04</span>
+                            <span class="panel-tag">Landing Pages</span>
+                        </div>
+                        <h3>GrowthLab</h3>
+                        <p>
+                            Gritty, orange-on-black landing page service page with scanline effect,
+                            mono font labels, and aggressive conversion-focused copywriting.
+                        </p>
+                        <div class="panel-features">
+                            <span>Scanline Effect</span>
+                            <span>Single Service</span>
+                            <span>Orange Black</span>
+                        </div>
+                        <a href="https://0x9z.github.io/landing-pages/growthlab/" target="_blank" rel="noopener noreferrer" class="panel-btn">
+                            View Live Demo →
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
 	
         <!-- Projects Section -->
         <section id="projects" class="projects">
@@ -3507,6 +3964,23 @@ if (document.readyState === 'loading') {
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = { PortfolioApp, AnalyticsTracker };
 }
+
+// TEMPLATES SECTION — Tab Switcher
+function openTemplate(evt, templateName) {
+    // Hide all panels
+    const panels = document.querySelectorAll('.template-panel');
+    panels.forEach(panel => panel.classList.remove('active'));
+
+    // Deactivate all tabs
+    const tabs = document.querySelectorAll('.template-tab');
+    tabs.forEach(tab => tab.classList.remove('active'));
+
+    // Activate current
+    const targetPanel = document.getElementById(templateName);
+    if (targetPanel) targetPanel.classList.add('active');
+    if (evt && evt.currentTarget) evt.currentTarget.classList.add('active');
+}
+
 </script>
 </body>
 </html>
